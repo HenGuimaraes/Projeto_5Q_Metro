@@ -1,0 +1,73 @@
+/*				LAYOUT RESPONSIVO				*/
+
+/*Zerando a página*/
+html,body,form {
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+	min-height: 100vh;
+	min-width: 100vw;
+}
+
+/*Definindo a flexbox para ter um layout responsivo*/
+body {
+    background-color: #7bc4fc;
+}
+
+body form{
+	/*indico o tipo de display e passo a direção do eixo*/
+	display: flex;
+    flex-direction: column;
+}
+
+body header {
+	height:50px;
+	width: 100%;
+	border-bottom: 1px solid black;
+	background-color: white;
+}
+
+body #corpo {
+	width: 90%;
+	margin: 20px auto;
+	border: 1px solid black;
+	background-color: white;
+	
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-around; /*Os itens aqui dentro serão alinhados na horizontal com espaçamento iguais sobre a div*/
+	align-items: center;/*Centralizando os itens na vertical, dentro da div*/
+	flex-direction: row;/*Os itens dentro estão com a direção em coluna, então setei para linha, um do lado do outro*/
+}
+
+body footer {
+	height: 80px;
+	width: 100%;
+	border-top: 1px solid black;
+	background-color: white;
+}
+
+/*				Configurando o conteudo do #corpo				*/
+
+body #corpo .box {
+	width: 30%;
+	height: 100px;
+	border: 1px solid black;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/*
+body #corpo .box button{
+	padding: 10px 30px;
+	border: 1px solid black;
+	cursor: pointer;
+	background-color: #3ed66e;
+	color: white;
+}
+
+body #corpo .box form button:hover{
+	background-color: #05b23b;
+}*/
