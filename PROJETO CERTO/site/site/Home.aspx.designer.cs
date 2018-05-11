@@ -10,7 +10,7 @@
 namespace site {
     
     
-    public partial class pagina1 {
+    public partial class Home {
         
         /// <summary>
         /// Controle form1.
@@ -22,12 +22,30 @@ namespace site {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Controle aaa.
+        /// Controle btnUm.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox aaa;
+        protected global::System.Web.UI.WebControls.Button btnUm;
+        
+        /// <summary>
+        /// Controle btnDois.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDois;
+        
+        /// <summary>
+        /// Controle btnTres.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnTres;
     }
 }

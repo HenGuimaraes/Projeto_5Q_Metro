@@ -26,7 +26,7 @@
 
          <div class="div2">
             
-            <div class="div3" style="margin-top:4%" id="divlink" >
+            <div class="div3" id="divlink" >
                 <a href="#" class="link">
               <img src="img/pinheiros-temperatura.png" class="icones" />
                 </a>
@@ -42,9 +42,9 @@
                 <a href="registro.aspx" class="link">
                <img src="img/pinheiros-estatistica.png" class="icones"/>
                 </a>
-            </div>   
-             <h3>456</h3>
-      </div>
+            
+             
+      
 <!--==============================================================================-->
         </div>
     </form>
