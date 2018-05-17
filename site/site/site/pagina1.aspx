@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pagina1.aspx.cs" Inherits="site.pagina1" %>
-<%=new site.pagina1().PegarTemperatura() %>
 
 <!DOCTYPE html>
 
@@ -7,104 +6,47 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-	<script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
-	<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+  
 </head>
-<body>
-    <section>
-		<h2>Média: <label id='average'>0.00</label></h2>
-	</section>
-	<section style="width:100%">
-		<canvas id="chart"></canvas>
-	</section>
-	<script>
+<body>  
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { packages: ['corechart', 'line'] });
+        google.charts.setOnLoadCallback(desenharGrafico);
 
-		var context = document.getElementById("chart").getContext("2d");
-		context.canvas.width = 1000;
-		context.canvas.height = 300;
-        
-        var configuration = {
-			type: 'line',
-			data: {
-				datasets: [{
-					label: "Temperature x Time",
-					type: 'line',
-				}]
-			},
-			options: {
-				scales: {
-					xAxes: [{
-						//type: 'value',
-						distribution: 'series',
-                        ticks: {
-                            beginAtZero:true
-                        }
-					}],
-					yAxes: [{
-						scaleLabel: {
-							display: true,
-							labelString: 'Temperature'
-                        },
-                        ticks: {
-                            beginAtZero:true
-                        }
-					}]
-				},
-				animation: {
-					duration: 0
-				}
-			}
-        };
-        
-		var chart = new Chart(context, configuration);
+        var total = 0, grafico = null, data = null;
 
-        //Função para obter os dados de temperatura do server
-        //Seria mais interessante fazer isso com WebSocket, porém para fins academicos, os dados serão atualizados via HTTP
-        
-        //Esse atributo dentro do contexto serve para saber qual foi o último índice processado, assim eliminado os outros elementos na
-        //hora de montar/atualizar o gráfico
-        this.lastIndexTemp = 0;
-        this.time = 0;
+        function desenharGrafico() {
+            if (data == null) {
+                data = new google.visualization.DataTable();
+                data.addColumn('number', 'Tempo');
+                data.addColumn('number', 'Temperatura ºC');
 
-        function get_data(){
-
-            var xhttp = new XMLHttpRequest();
-
-            xhttp.open("GET", "TemperaturaCNX.aspx", false);
-            xhttp.send();    
-			
-            var obj = JSON.parse(http.responseText);
-
-            if (obj.data.length == 0){
-                return;
+                grafico = new google.visualization.LineChart(document.getElementById('chartdiv'));
             }
 
-            var _lastIndexTemp = this.lastIndexTemp;
-            this.lastIndexTemp = obj.data.length;
-            listTemp = obj.data.slice(_lastIndexTemp);
+            grafico.draw(data, { title: "Temperaturas em Tempo Real" });
 
-            listTemp.forEach(data => {
-                //Máximo de 60 itens exibidos no gráfico
-                if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10){
-                    chart.data.labels.shift();
-                    chart.data.datasets[0].data.shift();
-                }
+            setTimeout(function () {
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    url: 'pagina1.aspx/TemperaturaAtual',
+                    data: '{}',
+                    success: function (response) {
+                        data.addRow([total, response.d]);
+                        total++;
+                        desenharGrafico();
+                    },
+                    error: function () {
+                    }
+                });
+            }, 1000);
+        }
 
-                chart.data.labels.push(this.time++);
-                chart.data.datasets[0].data.push(parseFloat(data));
-                chart.update();
-			});
-			
-			document.getElementById('average').textContent = obj.average
-		} 
-		
-		get_data();
-
-        setInterval(() => {
-            get_data();
-        }, 1000);
-
-	</script>
+    </script>
+    <div id="chartdiv"></div>
 </body>
 </html>

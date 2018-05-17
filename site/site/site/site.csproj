@@ -86,7 +86,7 @@
     <Content Include="grafico.aspx" />
     <Content Include="pagina1.aspx" />
     <Content Include="registro.aspx" />
-    <Content Include="TemperaturaCNX.aspx" />
+    <Content Include="Temperatura.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -123,12 +123,12 @@
     <Compile Include="registro.aspx.designer.cs">
       <DependentUpon>registro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TemperaturaCNX.aspx.cs">
-      <DependentUpon>TemperaturaCNX.aspx</DependentUpon>
+    <Compile Include="Temperatura.aspx.cs">
+      <DependentUpon>Temperatura.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TemperaturaCNX.aspx.designer.cs">
-      <DependentUpon>TemperaturaCNX.aspx</DependentUpon>
+    <Compile Include="Temperatura.aspx.designer.cs">
+      <DependentUpon>Temperatura.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
