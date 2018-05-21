@@ -1,73 +1,163 @@
-/*				LAYOUT RESPONSIVO				*/
-
-/*Zerando a página*/
-html,body,form {
-	margin: 0;
-	padding: 0;
-	border: 0;
-
-	min-height: 100vh;
-	min-width: 100vw;
+html, body, form{
+    margin:0;
+    padding: 0;
 }
 
-/*Definindo a flexbox para ter um layout responsivo*/
-body {
-    background-color: #7bc4fc;
+body{
+    background-color:black;
+}
+li{
+	display:inline;
 }
 
-body form{
-	/*indico o tipo de display e passo a direção do eixo*/
-	display: flex;
-    flex-direction: column;
+body header{
+    height: 70px;
+    width: 100%;
 }
 
-body header {
-	height:50px;
-	width: 100%;
-	border-bottom: 1px solid black;
-	background-color: white;
+.a{
+	font-size:20px;
+	color:white;
+	font-family:sans-serif;
+	text-decoration:none;
+	padding-left:1%;
 }
 
-body #corpo {
-	width: 90%;
-	margin: 20px auto;
-	border: 1px solid black;
-	background-color: white;
-	
-	flex-grow: 1;
-	display: flex;
-	justify-content: space-around; /*Os itens aqui dentro serão alinhados na horizontal com espaçamento iguais sobre a div*/
-	align-items: center;/*Centralizando os itens na vertical, dentro da div*/
-	flex-direction: row;/*Os itens dentro estão com a direção em coluna, então setei para linha, um do lado do outro*/
+.dropbtn {
+    background-color:transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: 70px;
 }
 
-body footer {
-	height: 80px;
-	width: 100%;
-	border-top: 1px solid black;
-	background-color: white;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-/*				Configurando o conteudo do #corpo				*/
-
-body #corpo .box {
-	width: 30%;
-	height: 100px;
-	border: 1px solid black;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-/*
-body #corpo .box button{
-	padding: 10px 30px;
-	border: 1px solid black;
-	cursor: pointer;
-	background-color: #3ed66e;
-	color: white;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    z-index: 1;
+	border-radius:5%;
 }
 
-body #corpo .box form button:hover{
-	background-color: #05b23b;
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	font-size:20	px;
+}
+
+.dropdown-content a:hover {
+	background-color: gray;
+	border-radius:5%;
+	}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color:white ;
+	color:black;
+	border-radius:5%;
+}
+
+.nav{
+    height:70px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    position: fixed;
+    z-index: 5;
+    display: inline;
+}
+
+.logomenu{
+    width: 4%;
+    height: 70%;
+}
+
+.corpo{
+    background-color: darkgray;
+    height:25%;
+    width: 100%;
+
+}
+
+/*.divex{
+    width: 100%;
+    height: 3%;
+    background-color:darkgray;
+    opacity: 0.3;
+    position:relative;
+    z-index: 10;
 }*/
+
+.icone{
+    width: 10%;
+    height: 55%;
+	float:left;
+	margin-left:0%;
+	margin-top:2%;
+	font-size:14px;
+	color:black;
+	border-radius:8%;
+	
+}
+
+
+.icone2{
+	width: 4%;
+    height: 48%;
+	float:left;
+	margin-left:5%;
+	margin-right:0%;
+	margin-top:2%;
+	border-radius:10%;
+	
+	
+}
+
+.header-site{
+    height: 70%;
+    width: 100%;
+    opacity: 0.5;
+    background-image: url(../img/marginalpinheiros.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+ footer{
+	display:black;
+	background-color:black;
+	width:100%;
+	height:15%;
+}
+.footer{
+	color:white;
+	font-size:14px;
+	font-family:arial;
+}
+.footer2{
+	margin-left:60%;
+	color:white;
+	float:left;
+	font-size:14px;
+	font-family:arial;
+}
+
+.divfoot{
+	float:left;
+	margin-top:5%;
+	margin-left:2%;
+}
