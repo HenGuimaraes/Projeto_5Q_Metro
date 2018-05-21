@@ -83,7 +83,7 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="grafico.aspx" />
+    <Content Include="Home.aspx" />
     <Content Include="pagina1.aspx" />
     <Content Include="registro.aspx" />
     <Content Include="Web.config" />
@@ -100,12 +100,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="grafico.aspx.cs">
-      <DependentUpon>grafico.aspx</DependentUpon>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="grafico.aspx.designer.cs">
-      <DependentUpon>grafico.aspx</DependentUpon>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="pagina1.aspx.cs">
       <DependentUpon>pagina1.aspx</DependentUpon>
