@@ -205,3 +205,6 @@ C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\
 C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\obj\Debug\site.csproj.CopyComplete
 C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\obj\Debug\site.dll
 C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\obj\Debug\site.pdb
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\obj\Debug\site.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\obj\Debug\site.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\obj\Debug\site.pdb
