@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="site.Home" %>
+﻿    <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="site.Home" %>
 
 <DOCTYPE! HTML>
 <html>
@@ -14,16 +14,16 @@
         <!--header-->
         <header>
             <nav class="nav">
-                <div>
+                <div id="logo">
                     <img class="logomenu" src="img/logo-2.png"/>
                 </div>
 		        <!--menu-->
 			    <div class="dropdown">
-                    <asp:Button Text="usuario" runat="server" class="dropbtn"/>
+                    <%--<asp:Button Text="usuario" runat="server" class="dropbtn"/>
 				    <div class="dropdown-content">
 					    <a href="#">cadastro</a>
 					    <a href="#">sair</a>
-				    </div>
+				    </div>--%>
 			    </div>
             </nav>
         </header>

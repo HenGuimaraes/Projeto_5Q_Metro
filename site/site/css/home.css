@@ -80,16 +80,20 @@ body header{
     display: inline;
 }
 
+#logo{
+    height: 70px;
+    width: 70px;
+}
+
 .logomenu{
-    width: 4%;
-    height: 70%;
+    width: 70px;
+    height: 70px;
 }
 
 .corpo{
     background-color: darkgray;
     height:25%;
     width: 100%;
-
 }
 
 /*.divex{
