@@ -14,7 +14,7 @@
 		<img src="img/logo-2.png"/>
         <div id="main">            
 			<asp:TextBox runat="server" id="txtLogin" placeholder="Digite seu login"/>
-			<asp:TextBox runat="server" id="txtSenha" placeholder="Digite sua senha"/>
+			<asp:TextBox runat="server" id="txtSenha" placeholder="Digite sua senha" />
 			<asp:Button Text="Entrar" runat="server" id="btnEntrar" OnClick="btnEntrar_Click"/>
         </div>
 		<asp:Label Text="" runat="server" ID="lblInvalido" style="color:red;
