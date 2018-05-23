@@ -11,74 +11,100 @@ namespace site
 {
     public partial class Registro : System.Web.UI.Page
     {
-        //======================================================================================//
+        int index;
+
+        /*
+         * DataBind() - vincula o DataSource com o dropDownList, ou seja, agora que ele tinha os valores
+         * graças ao DataSource, eu uso o DataBind pra inserir eles no DropDownList, através de dois campos
+         * de referência: DataTextField="cargo_nome" que serviu para passar o texto vindo do banco de dados;
+         *                DataValueField="cod_cargo" que serviu para informar o valor daquele campo.
+         * Os valores dos campos de referência tem que referênciar as colunas que você ta chamando,
+         * ou seja, valor com mesmo nome das colunas.
+         */
         protected void Page_Load(object sender, EventArgs e)
+
         {
-            btnlabel.Visible = false;
-            Label2.Visible = false;
+            //Escondendo a label do erro, vai aparecer só quando tiver ERRO
+            lblErro.Visible = false;
 
-            // aqui voce apaga as mensagens de erros
-        }
-        //======================================================================================//
-        protected void btnConfirmar_Click(object sender, EventArgs e)
-        {
-
-            if (btnSenha.Text != btnSenha1.Text)
-            {
-                btnlabel.Visible = true;
-                return;
-            }
-            // confirma se as senhas batem
-            if (string.IsNullOrWhiteSpace(btnnome.Text) || string.IsNullOrWhiteSpace(btnSenha.Text)
-                || string.IsNullOrWhiteSpace(btnSenha1.Text) || (DropDownList1.SelectedValue == "0")
-                || string.IsNullOrWhiteSpace(login.Text))
-            {
-                Label2.Visible = true;
-                return;
-            }// obriga o usuario a preencher todos os espaços
-
-
-
-            using (SqlConnection conn = new SqlConnection("Server=tcp:tab132.database.windows.net,1433;Initial Catalog=esporte;Persist Security Info=False;User ID=mateus383@tab132;Password=123456sS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
-            {
-                conn.Open();
-
-                using (SqlCommand cmd = new SqlCommand("SELECT login from usuario", conn))
+                //Preenchendo o dropDownList com os cargos do banco de dados.
+                using (SqlConnection conString = new SqlConnection("Server=tcp:ozen.database.windows.net,1433;Initial Catalog=DB_aula1;Persist Security Info=False;User ID=flad8;Password=D4DN9zc1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
                 {
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    conString.Open();
+
+                    using (SqlCommand codigoSql = new SqlCommand("SELECT cod_cargo, nome_cargo FROM Cargo;", conString))
                     {
-                        //Obtém os registros, um por vez    
-                        while (reader.Read() == true)
+                        //dropDownList.Items.Clear();
+                        dropDownList.Items.Insert(0, "Selecione o cargo");//Inserindo um novo item, nome autoexplicativo.
+
+                        using (SqlDataReader dr = codigoSql.ExecuteReader())
                         {
+                            //while (dr.Read()) {
+                            //    ListItem item = new ListItem();
+                            //    item.Value = dr.GetInt32(0).ToString();
+                            //    item.Text = dr.GetString(1);
+                            //    dropDownList.Items.Add(item);
+                            //}
+                            dropDownList.DataSource = dr;//Informa onde esta o bloco de dados para preencher o dropDown
+                            dropDownList.DataValueField = "cod_cargo";
+                            dropDownList.DataTextField = "nome_cargo";
+                            dropDownList.DataBind();
 
-                            string validacao;
-                            validacao = reader.GetString(0);
-
-                            if (validacao == login.Text)
+                            while(dropDownList.Items.IsReadOnly)
                             {
-
-                                login.Text = "o login ja existe tente outro";
-                                return;
-                            }// aqui valida se o vagao ja tem nomeação igual
-
+                                lblErro.Text = dropDownList.Items.FindByValue("1").ToString();
+                                lblErro.Visible = true;
+                            }
+                            //dropDownList.SelectedIndex = 0;//Deixando ele já selecionado
                         }
                     }
                 }
+        }
+       
+        protected void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            //if (string.IsNullOrWhiteSpace(txtNome.Text) || string.IsNullOrWhiteSpace(txtSenha.Text)
+            //    || string.IsNullOrWhiteSpace(txtConfirmarSenha.Text))
+            //{
+            //    lblErro.Visible = true;
+            //    return;
+            //}// obriga o usuario a preencher todos os espaços
 
-
-                //=====================================================================================//
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO usuario VALUES (@login, @senha, @Nome, @cod_cargo)", conn))
+            if (txtNome.Text != "" && txtLogin.Text != "" && txtSenha.Text != "" && txtConfirmarSenha.Text != ""
+               && index != 0) {
+                if (txtSenha.Text == txtConfirmarSenha.Text)
                 {
-                    cmd.Parameters.AddWithValue("@login", login.Text);
-                    cmd.Parameters.AddWithValue("@senha", btnSenha.Text);
-                    cmd.Parameters.AddWithValue("@Nome", btnnome.Text);
+                    using (SqlConnection conn = new SqlConnection("Server = tcp:ozen.database.windows.net,1433; Initial Catalog = DB_aula1; Persist Security Info = False; User ID = flad8; Password = D4DN9zc1; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;"))
+                    {
+                        conn.Open();
 
-                    cmd.Parameters.AddWithValue("@cod_cargo", DropDownList1.SelectedValue);
-                    cmd.ExecuteNonQuery();
+                        using (SqlCommand cmd = new SqlCommand(@"INSERT INTO usuario (nome, login, senha, cod_cargo) 
+                                                           VALUES (@nome, @login, @senha, @cargo)", conn))
+                        {
+                            cmd.Parameters.AddWithValue("@nome", txtNome.Text);
+                            cmd.Parameters.AddWithValue("@login", txtLogin.Text);
+                            cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
+                            cmd.Parameters.AddWithValue("@cargo", index);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+                else
+                {
+                    lblErro.Text = "As senhas não estão iguais";
+                    lblErro.Visible = true;
                 }
             }
-            // aqui é o codigo pra integrar o registro com o banco de dados
+            else
+            {
+                lblErro.Text = "Preencha todos os campos!!";
+                lblErro.Visible = true;
+            }
+        }
 
+        protected void dropDownList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            index = dropDownList.SelectedIndex - 1;
         }
     }
 }

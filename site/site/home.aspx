@@ -1,16 +1,15 @@
-﻿  <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="site.home" %>
- 
+﻿    <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="site.Home" %>
+
 <DOCTYPE! HTML>
 <html>
     <head>
         <meta charset="utf-8">
          <meta http-equiv="X-IU-Compatible" content="IE-edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/home.css"> 
+        <link rel="stylesheet" href="css/home.css">
         <link rel="icon" href="img/logo-2.png">
-        <title>home</title>
     </head>
-<body>
+<body> 
     <form runat="server">
         <!--header-->
         <header>
@@ -39,7 +38,7 @@
 	    <!--div e botões -->
             <div class="corpo">
 		    <img src="img/icone12.png" class="icone2" style="margin-left:28%">
-		   <button type="submit" class="icone">relatorio</button>
+		    <button type="submit" class="icone">relatorio</button>
 		    <img src="img/icone12.png" class="icone2" style="margin-left:12%">
 		    <button type="submit" class="icone" >estastisticas</button>
         </div>

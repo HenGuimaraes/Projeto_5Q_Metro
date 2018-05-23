@@ -10,6 +10,6 @@
 namespace site {
     
     
-    public partial class home {
+    public partial class Home {
     }
 }

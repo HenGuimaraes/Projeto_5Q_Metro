@@ -8,22 +8,22 @@ html,body {
 }
 
 body{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: blue;
+	display: flex;/*Aplicando flexbox*/
+	justify-content: center;/*Centraliza na vertical*/
+	align-items: center;/*Centraliza na horizontal*/
+	background-image: url(../img/fundoLogin.jpg);
+	background-size: cover;
 }
 
 body form{
 	height: 350px;
 	width: 400px;
-	border:1px solid black;
 	background-color: white;
-	display: inherit;
+	display: inherit;/*herda o display flex*/
 	justify-content: center;
 	align-items: center;
 	border-radius: 10px;
-	flex-direction: column;
+	flex-direction: column;/*os itens dentro vão ficar um embaixo do outro como se fosse um bloco*/
 }
 
 body form #main{
