@@ -87,6 +87,7 @@
     <Content Include="Home2.aspx" />
     <Content Include="pagina1.aspx" />
     <Content Include="registro.aspx" />
+    <Content Include="tabelasevagoes.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +130,13 @@
     </Compile>
     <Compile Include="registro.aspx.designer.cs">
       <DependentUpon>registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tabelasevagoes.aspx.cs">
+      <DependentUpon>tabelasevagoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tabelasevagoes.aspx.designer.cs">
+      <DependentUpon>tabelasevagoes.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
