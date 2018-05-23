@@ -1,4 +1,4 @@
-﻿html,body {
+html,body {
 	margin:0;
 	padding: 0;
 	border:0;
@@ -18,8 +18,7 @@ body{
 body form{
 	height: 350px;
 	width: 400px;
-	background-color: rgb(255, 255, 255, 0.6);
-
+	background-color: white;
 	display: inherit;/*herda o display flex*/
 	justify-content: center;
 	align-items: center;
@@ -32,7 +31,6 @@ body form #main{
 	align-items: center;
 	flex-direction: column;
 	margin-bottom: 20px;
-
 }
 
 body form #main #txtLogin,#txtSenha{

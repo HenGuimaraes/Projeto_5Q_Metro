@@ -35,31 +35,35 @@ namespace site
                         cmd.Parameters.AddWithValue("@login", txtLogin.Text);
                         cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
                         //Com o dataReader eu consigo guardar a consulta em uma variavel, essa consulta vem como um conjunto de dados
-                        SqlDataReader dr = cmd.ExecuteReader();
-                        
-                        //Leia a consulta, após ler eu consigo entender o conjunto de dados que tinha e trabalhar com eles
-                        dr.Read();
-                        int codCargo = dr.GetInt32(2);
+                        using (SqlDataReader dr = cmd.ExecuteReader())
+                        {
 
-                        /*
-                            * se HasRows = true, então significa que ele conseguiu achar a consulta, que retornou uma linha
-                            * no banco de dados, ou seja o usuário acertou o login e a senha.
-                            */
-                        if (dr.HasRows)
-                        {
-                            if (codCargo == 1)//Se for funcionário, codCargo = 1, então vai pra página dele
+                            //Leia a consulta, após ler eu consigo entender o conjunto de dados que tinha e trabalhar com eles
+                            dr.Read();
+                            int codCargo = 0;
+
+                            /*
+                             * se HasRows = true, então significa que ele conseguiu achar a consulta, que retornou uma linha
+                             * no banco de dados, ou seja o usuário acertou o login e a senha.
+                             */
+                            if (dr.HasRows)
+                                {
+                                    codCargo = dr.GetInt32(2);
+
+                                    if (codCargo == 1)//Se for funcionário, codCargo = 1, então vai pra página dele
+                                    {
+                                        Response.Redirect("http://localhost:2616/Home.aspx");
+                                    }
+                                    else//Se for administrador, codCargo = 2, então vai para página dele
+                                    {
+                                        Response.Redirect("http://localhost:2616/Home2.aspx");
+                                    }
+                                }
+                            else//Caso contrário, ele errou um dos dois e exibe a mensagem para ele corrigir
                             {
-                                Response.Redirect("http://localhost:2616/Home.aspx");
+                                lblInvalido.Text = "Login ou senha inválidos, digite novamente!";
+                                lblInvalido.Visible = true;
                             }
-                            else//Se for administrador, codCargo = 2, então vai para página dele
-                            {
-                                Response.Redirect("http://localhost:2616/Home2.aspx");
-                            }
-                        }
-                        else//Caso contrário, ele errou um dos dois e exibe a mensagem para ele corrigir
-                        {
-                            lblInvalido.Text = "Login ou senha inválidos, digite novamente!";
-                            lblInvalido.Visible = true;
                         }
                     }
                     else
