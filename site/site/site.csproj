@@ -83,10 +83,12 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="grafico.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Home2.aspx" />
     <Content Include="pagina1.aspx" />
     <Content Include="registro.aspx" />
+    <Content Include="tabelasevagoes.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +102,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="grafico.aspx.cs">
+      <DependentUpon>grafico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="grafico.aspx.designer.cs">
+      <DependentUpon>grafico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -129,6 +138,13 @@
     </Compile>
     <Compile Include="registro.aspx.designer.cs">
       <DependentUpon>registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tabelasevagoes.aspx.cs">
+      <DependentUpon>tabelasevagoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tabelasevagoes.aspx.designer.cs">
+      <DependentUpon>tabelasevagoes.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
