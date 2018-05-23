@@ -24,13 +24,14 @@ namespace site
         protected void Page_Load(object sender, EventArgs e)
 
         {
-            //Escondendo a label do erro, vai aparecer só quando tiver ERRO
-            lblErro.Visible = false;
-
+            //Esse IF faz com que o Load só rode na primeira vez que a página é carregada
             if(IsPostBack == true)
             {
                 return;
             }
+
+            //Escondendo a label do erro, vai aparecer só quando tiver ERRO
+            lblErro.Visible = false;
 
             //Preenchendo o dropDownList com os cargos do banco de dados.
             using (SqlConnection conString = new SqlConnection("Server=tcp:ozen.database.windows.net,1433;Initial Catalog=DB_aula1;Persist Security Info=False;User ID=flad8;Password=D4DN9zc1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
@@ -39,28 +40,14 @@ namespace site
 
                 using (SqlCommand codigoSql = new SqlCommand("SELECT cod_cargo, nome_cargo FROM Cargo;", conString))
                 {
-                    //dropDownList.Items.Clear();
                     dropDownList.Items.Insert(0, "Selecione o cargo");//Inserindo um novo item, nome autoexplicativo.
 
                     using (SqlDataReader dr = codigoSql.ExecuteReader())
                     {
-                        //while (dr.Read()) {
-                        //    ListItem item = new ListItem();
-                        //    item.Value = dr.GetInt32(0).ToString();
-                        //    item.Text = dr.GetString(1);
-                        //    dropDownList.Items.Add(item);
-                        //}
                         dropDownList.DataSource = dr;//Informa onde esta o bloco de dados para preencher o dropDown
                         dropDownList.DataValueField = "cod_cargo";
                         dropDownList.DataTextField = "nome_cargo";
                         dropDownList.DataBind();
-
-                        while(dropDownList.Items.IsReadOnly)
-                        {
-                            lblErro.Text = dropDownList.Items.FindByValue("1").ToString();
-                            lblErro.Visible = true;
-                        }
-                        //dropDownList.SelectedIndex = 0;//Deixando ele já selecionado
                     }
                 }
             }
@@ -107,8 +94,10 @@ namespace site
             }
         }
 
+        //Evento de quando você seleciona algo do dropDownList
         protected void dropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Captura o indice quando selecionado o item
             index = dropDownList.SelectedIndex;
         }
     }

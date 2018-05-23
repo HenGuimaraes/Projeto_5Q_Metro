@@ -9,8 +9,8 @@ html,body {
 
 body{
 	display: flex;/*Aplicando flexbox*/
-	justify-content: center;/*Centraliza na vertical*/
-	align-items: center;/*Centraliza na horizontal*/
+	justify-content: center;/*Centraliza na horizontal*/
+	align-items: center;/*Centraliza na vertical*/
 	background-image: url(../img/fundoLogin.jpg);
 	background-size: cover;
 }
