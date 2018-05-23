@@ -27,38 +27,43 @@ namespace site
             //Escondendo a label do erro, vai aparecer só quando tiver ERRO
             lblErro.Visible = false;
 
-                //Preenchendo o dropDownList com os cargos do banco de dados.
-                using (SqlConnection conString = new SqlConnection("Server=tcp:ozen.database.windows.net,1433;Initial Catalog=DB_aula1;Persist Security Info=False;User ID=flad8;Password=D4DN9zc1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
+            if(IsPostBack == true)
+            {
+                return;
+            }
+
+            //Preenchendo o dropDownList com os cargos do banco de dados.
+            using (SqlConnection conString = new SqlConnection("Server=tcp:ozen.database.windows.net,1433;Initial Catalog=DB_aula1;Persist Security Info=False;User ID=flad8;Password=D4DN9zc1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
+            {
+                conString.Open();
+
+                using (SqlCommand codigoSql = new SqlCommand("SELECT cod_cargo, nome_cargo FROM Cargo;", conString))
                 {
-                    conString.Open();
+                    //dropDownList.Items.Clear();
+                    dropDownList.Items.Insert(0, "Selecione o cargo");//Inserindo um novo item, nome autoexplicativo.
 
-                    using (SqlCommand codigoSql = new SqlCommand("SELECT cod_cargo, nome_cargo FROM Cargo;", conString))
+                    using (SqlDataReader dr = codigoSql.ExecuteReader())
                     {
-                        //dropDownList.Items.Clear();
-                        dropDownList.Items.Insert(0, "Selecione o cargo");//Inserindo um novo item, nome autoexplicativo.
+                        //while (dr.Read()) {
+                        //    ListItem item = new ListItem();
+                        //    item.Value = dr.GetInt32(0).ToString();
+                        //    item.Text = dr.GetString(1);
+                        //    dropDownList.Items.Add(item);
+                        //}
+                        dropDownList.DataSource = dr;//Informa onde esta o bloco de dados para preencher o dropDown
+                        dropDownList.DataValueField = "cod_cargo";
+                        dropDownList.DataTextField = "nome_cargo";
+                        dropDownList.DataBind();
 
-                        using (SqlDataReader dr = codigoSql.ExecuteReader())
+                        while(dropDownList.Items.IsReadOnly)
                         {
-                            //while (dr.Read()) {
-                            //    ListItem item = new ListItem();
-                            //    item.Value = dr.GetInt32(0).ToString();
-                            //    item.Text = dr.GetString(1);
-                            //    dropDownList.Items.Add(item);
-                            //}
-                            dropDownList.DataSource = dr;//Informa onde esta o bloco de dados para preencher o dropDown
-                            dropDownList.DataValueField = "cod_cargo";
-                            dropDownList.DataTextField = "nome_cargo";
-                            dropDownList.DataBind();
-
-                            while(dropDownList.Items.IsReadOnly)
-                            {
-                                lblErro.Text = dropDownList.Items.FindByValue("1").ToString();
-                                lblErro.Visible = true;
-                            }
-                            //dropDownList.SelectedIndex = 0;//Deixando ele já selecionado
+                            lblErro.Text = dropDownList.Items.FindByValue("1").ToString();
+                            lblErro.Visible = true;
                         }
+                        //dropDownList.SelectedIndex = 0;//Deixando ele já selecionado
                     }
                 }
+            }
         }
        
         protected void btnConfirmar_Click(object sender, EventArgs e)
@@ -104,7 +109,7 @@ namespace site
 
         protected void dropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            index = dropDownList.SelectedIndex - 1;
+            index = dropDownList.SelectedIndex;
         }
     }
 }
