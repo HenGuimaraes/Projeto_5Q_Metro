@@ -29,7 +29,7 @@
                   
                    <asp:DropDownList placeholder="trens"  ID="trens" runat="server">
                       <asp:ListItem text="trens" value="0"></asp:ListItem>
-                   </asp:DropDownList>
+                   </asp:DropDownList>  
                    <!-----aqui é o dropdown, ele ira gerar automaticamente apartir dos dados registrados no banco de dados,
                        ele nao ira aparecer aqui --->
                        
