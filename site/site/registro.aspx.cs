@@ -12,6 +12,7 @@ namespace site
     public partial class Registro : System.Web.UI.Page
     {
         int index;
+        SqlConnection conn = new SqlConnection("Server = tcp:ozen.database.windows.net,1433; Initial Catalog = DB_aula1; Persist Security Info = False; User ID = flad8; Password = D4DN9zc1; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;");
 
         /*
          * DataBind() - vincula o DataSource com o dropDownList, ou seja, agora que ele tinha os valores
@@ -34,11 +35,11 @@ namespace site
             lblErro.Visible = false;
 
             //Preenchendo o dropDownList com os cargos do banco de dados.
-            using (SqlConnection conString = new SqlConnection("Server=tcp:ozen.database.windows.net,1433;Initial Catalog=DB_aula1;Persist Security Info=False;User ID=flad8;Password=D4DN9zc1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
+            using (conn)
             {
-                conString.Open();
+                conn.Open();
 
-                using (SqlCommand codigoSql = new SqlCommand("SELECT cod_cargo, nome_cargo FROM Cargo;", conString))
+                using (SqlCommand codigoSql = new SqlCommand("SELECT cod_cargo, nome_cargo FROM Cargo;", conn))
                 {
                     dropDownList.Items.Insert(0, "Selecione o cargo");//Inserindo um novo item, nome autoexplicativo.
 
@@ -66,27 +67,44 @@ namespace site
                 }
                 else
                 {
-                    if (txtSenha.Text == txtConfirmarSenha.Text)
+                    using (conn)
                     {
-                        using (SqlConnection conn = new SqlConnection("Server = tcp:ozen.database.windows.net,1433; Initial Catalog = DB_aula1; Persist Security Info = False; User ID = flad8; Password = D4DN9zc1; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;"))
-                        {
-                            conn.Open();
+                        conn.Open();
 
-                            using (SqlCommand cmd = new SqlCommand(@"INSERT INTO usuario (nome, login, senha, cod_cargo) 
-                                                           VALUES (@nome, @login, @senha, @cargo)", conn))
+                        using (SqlCommand cmd = new SqlCommand("SELECT login FROM usuario WHERE login = @login;"))
+                        {
+                            cmd.Parameters.AddWithValue("@login", txtLogin.Text);
+                            String login = (String)cmd.ExecuteScalar();
+                            
+                            if(login == txtLogin.Text)
                             {
-                                cmd.Parameters.AddWithValue("@nome", txtNome.Text);
-                                cmd.Parameters.AddWithValue("@login", txtLogin.Text);
-                                cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
-                                cmd.Parameters.AddWithValue("@cargo", index);
-                                cmd.ExecuteNonQuery();
+                                lblErro.Text = "Não é possivel cadastrar, o login digitado já existe!!";
+                            }
+                            else
+                            {
+                                if (txtSenha.Text == txtConfirmarSenha.Text)
+                                {
+                                    using (conn)
+                                    {
+                                        using (SqlCommand codigoSql = new SqlCommand(@"INSERT INTO usuario (nome, login, senha, cod_cargo) 
+                                                           VALUES (@nome, @login, @senha, @cargo)", conn))
+                                        {
+                                            codigoSql.Parameters.AddWithValue("@nome", txtNome.Text);
+                                            codigoSql.Parameters.AddWithValue("@login", txtLogin.Text);
+                                            codigoSql.Parameters.AddWithValue("@senha", txtSenha.Text);
+                                            codigoSql.Parameters.AddWithValue("@cargo", index);
+                                            codigoSql.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    lblErro.Text = "As senhas não estão iguais";
+                                    lblErro.Visible = true;
+                                }
                             }
                         }
-                    }
-                    else
-                    {
-                        lblErro.Text = "As senhas não estão iguais";
-                        lblErro.Visible = true;
+
                     }
                 }
             }
