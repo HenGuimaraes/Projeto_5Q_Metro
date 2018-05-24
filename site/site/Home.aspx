@@ -117,7 +117,7 @@
 		    <img src="img/icone12.png" class="icone2" style="margin-left:28%">
 		    <button type="button" class="icone" id="myBtn">Grafico</button>
 		    <img src="img/icone12.png" class="icone2" style="margin-left:12%">
-            <button type="button" class="icone" id="botao" >estastisticas</button>
+            <button type="button" class="icone" id="botao" >Cadastrar usuários</button>
         </div>
             
 	    <!--footer-->
