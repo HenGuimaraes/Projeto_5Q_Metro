@@ -55,36 +55,39 @@ namespace site
        
         protected void btnConfirmar_Click(object sender, EventArgs e)
         {
-            //if (string.IsNullOrWhiteSpace(txtNome.Text) || string.IsNullOrWhiteSpace(txtSenha.Text)
-            //    || string.IsNullOrWhiteSpace(txtConfirmarSenha.Text))
-            //{
-            //    lblErro.Visible = true;
-            //    return;
-            //}// obriga o usuario a preencher todos os espaços
-
             if (txtNome.Text != "" && txtLogin.Text != "" && txtSenha.Text != "" && txtConfirmarSenha.Text != ""
-               && index != 0) {
-                if (txtSenha.Text == txtConfirmarSenha.Text)
+               && index != 0)
+            {
+                if (string.IsNullOrWhiteSpace(txtLogin.Text) || string.IsNullOrWhiteSpace(txtSenha.Text)
+                    || string.IsNullOrWhiteSpace(txtConfirmarSenha.Text))
                 {
-                    using (SqlConnection conn = new SqlConnection("Server = tcp:ozen.database.windows.net,1433; Initial Catalog = DB_aula1; Persist Security Info = False; User ID = flad8; Password = D4DN9zc1; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;"))
-                    {
-                        conn.Open();
-
-                        using (SqlCommand cmd = new SqlCommand(@"INSERT INTO usuario (nome, login, senha, cod_cargo) 
-                                                           VALUES (@nome, @login, @senha, @cargo)", conn))
-                        {
-                            cmd.Parameters.AddWithValue("@nome", txtNome.Text);
-                            cmd.Parameters.AddWithValue("@login", txtLogin.Text);
-                            cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
-                            cmd.Parameters.AddWithValue("@cargo", index);
-                            cmd.ExecuteNonQuery();
-                        }
-                    }
+                    lblErro.Text = "Não é permitido espaços nos campos de Login e Senhas";
+                    lblErro.Visible = true;
                 }
                 else
                 {
-                    lblErro.Text = "As senhas não estão iguais";
-                    lblErro.Visible = true;
+                    if (txtSenha.Text == txtConfirmarSenha.Text)
+                    {
+                        using (SqlConnection conn = new SqlConnection("Server = tcp:ozen.database.windows.net,1433; Initial Catalog = DB_aula1; Persist Security Info = False; User ID = flad8; Password = D4DN9zc1; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;"))
+                        {
+                            conn.Open();
+
+                            using (SqlCommand cmd = new SqlCommand(@"INSERT INTO usuario (nome, login, senha, cod_cargo) 
+                                                           VALUES (@nome, @login, @senha, @cargo)", conn))
+                            {
+                                cmd.Parameters.AddWithValue("@nome", txtNome.Text);
+                                cmd.Parameters.AddWithValue("@login", txtLogin.Text);
+                                cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
+                                cmd.Parameters.AddWithValue("@cargo", index);
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        lblErro.Text = "As senhas não estão iguais";
+                        lblErro.Visible = true;
+                    }
                 }
             }
             else

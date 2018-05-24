@@ -13,8 +13,8 @@ body form .modalCadastro {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
-    width: 80%;
-    height: 600px;
+    width: 50%;
+    height: 500px;
 }
 
 body form .modalCadastro #corpo {
