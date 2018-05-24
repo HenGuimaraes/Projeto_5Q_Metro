@@ -19,7 +19,9 @@ namespace site
        
         protected void Page_Load(object sender, EventArgs e)
         { 
-            using (SqlConnection conn = new SqlConnection("Server=tcp:tab132.database.windows.net,1433;Initial Catalog=esporte;Persist Security Info=False;User ID=mateus383@tab132;Password=123456sS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
+            using (SqlConnection conn = new SqlConnection(@"Server = tcp:tab132.database.windows.net,1433;
+Initial Catalog = esporte; Persist Security Info = False; User ID = mateus383@tab132; Password = 123456sS;
+            MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30; "))
             {
                 conn.Open();
                 //=====================================================================================//

@@ -10,7 +10,7 @@
 namespace site {
     
     
-    public partial class Default {
+    public partial class Home {
         
         /// <summary>
         /// Controle form1.
@@ -22,39 +22,30 @@ namespace site {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Controle txtLogin.
+        /// Controle btnUm.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLogin;
+        protected global::System.Web.UI.WebControls.Button btnUm;
         
         /// <summary>
-        /// Controle txtSenha.
+        /// Controle btnDois.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSenha;
+        protected global::System.Web.UI.WebControls.Button btnDois;
         
         /// <summary>
-        /// Controle btnEntrar.
+        /// Controle btnTres.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEntrar;
-        
-        /// <summary>
-        /// Controle lblInvalido.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInvalido;
+        protected global::System.Web.UI.WebControls.Button btnTres;
     }
 }

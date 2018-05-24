@@ -84,11 +84,8 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
-    <Content Include="Home2.aspx" />
     <Content Include="pagina1.aspx" />
     <Content Include="registro.aspx" />
-    <Content Include="tabela.aspx" />
-    <Content Include="tabelasevagoes.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -110,13 +107,6 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Home2.aspx.cs">
-      <DependentUpon>Home2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home2.aspx.designer.cs">
-      <DependentUpon>Home2.aspx</DependentUpon>
-    </Compile>
     <Compile Include="pagina1.aspx.cs">
       <DependentUpon>pagina1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -131,20 +121,6 @@
     </Compile>
     <Compile Include="registro.aspx.designer.cs">
       <DependentUpon>registro.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="tabela.aspx.cs">
-      <DependentUpon>tabela.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="tabela.aspx.designer.cs">
-      <DependentUpon>tabela.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="tabelasevagoes.aspx.cs">
-      <DependentUpon>tabelasevagoes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="tabelasevagoes.aspx.designer.cs">
-      <DependentUpon>tabelasevagoes.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -28,7 +28,9 @@ namespace site
             lblErro.Visible = false;
 
                 //Preenchendo o dropDownList com os cargos do banco de dados.
-                using (SqlConnection conString = new SqlConnection("Server=tcp:ozen.database.windows.net,1433;Initial Catalog=DB_aula1;Persist Security Info=False;User ID=flad8;Password=D4DN9zc1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
+                using (SqlConnection conString = new SqlConnection(@"Server = tcp:tab132.database.windows.net,1433;
+                Initial Catalog = esporte; Persist Security Info = False; User ID = mateus383@tab132; Password = 123456sS;
+                MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;  "))
                 {
                     conString.Open();
 
@@ -71,20 +73,22 @@ namespace site
             //}// obriga o usuario a preencher todos os espaços
 
             if (txtNome.Text != "" && txtLogin.Text != "" && txtSenha.Text != "" && txtConfirmarSenha.Text != ""
-               && index != 0) {
+             ) {
                 if (txtSenha.Text == txtConfirmarSenha.Text)
                 {
-                    using (SqlConnection conn = new SqlConnection("Server = tcp:ozen.database.windows.net,1433; Initial Catalog = DB_aula1; Persist Security Info = False; User ID = flad8; Password = D4DN9zc1; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;"))
-                    {
+                    using (SqlConnection conn = new SqlConnection(@"Server = tcp:tab132.database.windows.net,1433;
+Initial Catalog = esporte; Persist Security Info = False; User ID = mateus383@tab132; Password = 123456sS;
+                    MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;"))
+                    {   
                         conn.Open();
 
-                        using (SqlCommand cmd = new SqlCommand(@"INSERT INTO usuario (nome, login, senha, cod_cargo) 
-                                                           VALUES (@nome, @login, @senha, @cargo)", conn))
+                        using (SqlCommand cmd = new SqlCommand(@"INSERT INTO Usuario 
+                                                           VALUES ( @login,@senha, @nome, @cod_cargo)", conn))
                         {
                             cmd.Parameters.AddWithValue("@nome", txtNome.Text);
                             cmd.Parameters.AddWithValue("@login", txtLogin.Text);
                             cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
-                            cmd.Parameters.AddWithValue("@cargo", index);
+                            cmd.Parameters.AddWithValue("@cod_cargo", dropDownList.SelectedValue);
                             cmd.ExecuteNonQuery();
                         }
                     }
