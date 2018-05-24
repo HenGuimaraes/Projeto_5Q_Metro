@@ -1,0 +1,274 @@
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\site.dll.config
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\site.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\site.pdb
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\csc.exe
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\csc.exe.config
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\csc.rsp
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\csi.exe
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\csi.exe.config
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\csi.rsp
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.AppContext.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Console.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.IO.Compression.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.IO.Pipes.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Security.Claims.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Threading.Thread.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.ValueTuple.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Xml.XPath.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\vbc.exe
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\vbc.exe.config
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\vbc.rsp
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\VBCSCompiler.exe
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\Newtonsoft.Json.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\System.Net.Http.Formatting.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\System.Web.Http.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\System.Web.Http.WebHost.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\Newtonsoft.Json.xml
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\System.Net.Http.Formatting.xml
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\System.Web.Http.xml
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\System.Web.Http.WebHost.xml
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\pt-br\System.Net.Http.Formatting.resources.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\pt-br\System.Web.Http.resources.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\bin\pt-br\System.Web.Http.WebHost.resources.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\obj\Debug\site.csprojResolveAssemblyReference.cache
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\obj\Debug\site.csproj.CoreCompileInputs.cache
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\obj\Debug\site.csproj.CopyComplete
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\obj\Debug\site.dll
+C:\Users\mateu\Desktop\Nova pasta\faculdade html\github\Projeto_5Q_Metro\site\site\obj\Debug\site.pdb
+C:\Users\mateu\Desktop\site\site\bin\site.dll.config
+C:\Users\mateu\Desktop\site\site\bin\site.dll
+C:\Users\mateu\Desktop\site\site\bin\site.pdb
+C:\Users\mateu\Desktop\site\site\bin\roslyn\csc.exe
+C:\Users\mateu\Desktop\site\site\bin\roslyn\csc.exe.config
+C:\Users\mateu\Desktop\site\site\bin\roslyn\csc.rsp
+C:\Users\mateu\Desktop\site\site\bin\roslyn\csi.exe
+C:\Users\mateu\Desktop\site\site\bin\roslyn\csi.exe.config
+C:\Users\mateu\Desktop\site\site\bin\roslyn\csi.rsp
+C:\Users\mateu\Desktop\site\site\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\mateu\Desktop\site\site\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\mateu\Desktop\site\site\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.AppContext.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Console.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.IO.Compression.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.IO.Pipes.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Security.Claims.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Threading.Thread.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.ValueTuple.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Xml.XPath.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\mateu\Desktop\site\site\bin\roslyn\vbc.exe
+C:\Users\mateu\Desktop\site\site\bin\roslyn\vbc.exe.config
+C:\Users\mateu\Desktop\site\site\bin\roslyn\vbc.rsp
+C:\Users\mateu\Desktop\site\site\bin\roslyn\VBCSCompiler.exe
+C:\Users\mateu\Desktop\site\site\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\mateu\Desktop\site\site\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\mateu\Desktop\site\site\bin\Newtonsoft.Json.dll
+C:\Users\mateu\Desktop\site\site\bin\System.Net.Http.Formatting.dll
+C:\Users\mateu\Desktop\site\site\bin\System.Web.Http.dll
+C:\Users\mateu\Desktop\site\site\bin\System.Web.Http.WebHost.dll
+C:\Users\mateu\Desktop\site\site\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\mateu\Desktop\site\site\bin\Newtonsoft.Json.xml
+C:\Users\mateu\Desktop\site\site\bin\System.Net.Http.Formatting.xml
+C:\Users\mateu\Desktop\site\site\bin\System.Web.Http.xml
+C:\Users\mateu\Desktop\site\site\bin\System.Web.Http.WebHost.xml
+C:\Users\mateu\Desktop\site\site\bin\pt-br\System.Net.Http.Formatting.resources.dll
+C:\Users\mateu\Desktop\site\site\bin\pt-br\System.Web.Http.resources.dll
+C:\Users\mateu\Desktop\site\site\bin\pt-br\System.Web.Http.WebHost.resources.dll
+C:\Users\mateu\Desktop\site\site\obj\Debug\site.csprojResolveAssemblyReference.cache
+C:\Users\mateu\Desktop\site\site\obj\Debug\site.csproj.CoreCompileInputs.cache
+C:\Users\mateu\Desktop\site\site\obj\Debug\site.csproj.CopyComplete
+C:\Users\mateu\Desktop\site\site\obj\Debug\site.dll
+C:\Users\mateu\Desktop\site\site\obj\Debug\site.pdb
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\site.dll.config
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\site.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\site.pdb
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\csc.exe
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\csc.exe.config
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\csc.rsp
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\csi.exe
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\csi.exe.config
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\csi.rsp
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.AppContext.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Console.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.IO.Compression.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Security.Claims.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.ValueTuple.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\vbc.exe
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\vbc.exe.config
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\vbc.rsp
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\VBCSCompiler.exe
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\Newtonsoft.Json.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\System.Net.Http.Formatting.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\System.Web.Http.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\System.Web.Http.WebHost.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\Newtonsoft.Json.xml
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\System.Net.Http.Formatting.xml
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\System.Web.Http.xml
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\System.Web.Http.WebHost.xml
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\pt-br\System.Net.Http.Formatting.resources.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\pt-br\System.Web.Http.resources.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\bin\pt-br\System.Web.Http.WebHost.resources.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\obj\Debug\site.csprojResolveAssemblyReference.cache
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\obj\Debug\site.csproj.CoreCompileInputs.cache
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\obj\Debug\site.csproj.CopyComplete
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\obj\Debug\site.dll
+C:\Users\Lucas.DESKTOP-UGD3Q49\Documents\github\Projeto_5Q_Metro\site\site\site\obj\Debug\site.pdb
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\obj\Debug\site.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\obj\Debug\site.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\obj\Debug\site.pdb
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\site.dll.config
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\site.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\site.pdb
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\csc.exe
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\csc.exe.config
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\csc.rsp
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\csi.exe
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\csi.exe.config
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\csi.rsp
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.AppContext.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Console.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.IO.Compression.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.IO.Pipes.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Security.Claims.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Threading.Thread.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.ValueTuple.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Xml.XPath.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\vbc.exe
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\vbc.exe.config
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\vbc.rsp
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\VBCSCompiler.exe
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\Newtonsoft.Json.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\System.Net.Http.Formatting.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\System.Web.Http.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\System.Web.Http.WebHost.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\Newtonsoft.Json.xml
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\System.Net.Http.Formatting.xml
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\System.Web.Http.xml
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\System.Web.Http.WebHost.xml
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\pt-br\System.Net.Http.Formatting.resources.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\pt-br\System.Web.Http.resources.dll
+C:\Users\aluno\Downloads\Projeto_5Q_Metro\site\site\bin\pt-br\System.Web.Http.WebHost.resources.dll
