@@ -16,9 +16,10 @@ namespace site
 
         protected void Page_Load(object sender, EventArgs e)
         {
-			lblInvalido.Visible = false;
-			txtLogin.Focus();
+			  lblInvalido.Visible = false;
+			  txtLogin.Focus();
         }
+
 
 		protected void btnEntrar_Click(object sender, EventArgs e) {
             using (conn)
