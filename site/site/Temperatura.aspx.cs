@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace site
 {
-    public partial class pagina1 : System.Web.UI.Page
+    public partial class TemperaturaCNX : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
