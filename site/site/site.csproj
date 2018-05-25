@@ -83,10 +83,11 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="grafico.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Home2.aspx" />
     <Content Include="pagina1.aspx" />
     <Content Include="registro.aspx" />
-    <Content Include="Temperatura.aspx" />
+    <Content Include="tabelasevagoes.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -101,12 +102,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="grafico.aspx.cs">
-      <DependentUpon>grafico.aspx</DependentUpon>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="grafico.aspx.designer.cs">
-      <DependentUpon>grafico.aspx</DependentUpon>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home2.aspx.cs">
+      <DependentUpon>Home2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home2.aspx.designer.cs">
+      <DependentUpon>Home2.aspx</DependentUpon>
     </Compile>
     <Compile Include="pagina1.aspx.cs">
       <DependentUpon>pagina1.aspx</DependentUpon>
@@ -123,12 +131,12 @@
     <Compile Include="registro.aspx.designer.cs">
       <DependentUpon>registro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Temperatura.aspx.cs">
-      <DependentUpon>Temperatura.aspx</DependentUpon>
+    <Compile Include="tabelasevagoes.aspx.cs">
+      <DependentUpon>tabelasevagoes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Temperatura.aspx.designer.cs">
-      <DependentUpon>Temperatura.aspx</DependentUpon>
+    <Compile Include="tabelasevagoes.aspx.designer.cs">
+      <DependentUpon>tabelasevagoes.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

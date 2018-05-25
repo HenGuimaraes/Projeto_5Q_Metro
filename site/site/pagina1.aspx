@@ -6,7 +6,6 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-  
 </head>
 <body>  
     <script src="http://code.jquery.com/jquery-1.8.2.js"></script>

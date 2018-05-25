@@ -16,6 +16,7 @@ namespace site
         {
 
         }
+        
         [WebMethod]
         public static double TemperaturaAtual()
         {/*
