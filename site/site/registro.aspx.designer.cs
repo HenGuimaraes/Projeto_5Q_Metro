@@ -76,7 +76,11 @@ namespace site {
         protected global::System.Web.UI.WebControls.Button btnConfirmar;
         
         /// <summary>
+<<<<<<< HEAD
         /// lblErro control.
+=======
+        /// Controle lblErro.
+>>>>>>> 4ce4e1f76e1a9d338350daa87659df62bbc84a8b
         /// </summary>
         /// <remarks>
         /// Auto-generated field.

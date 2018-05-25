@@ -12,7 +12,11 @@ namespace site
     public partial class Registro : System.Web.UI.Page
     {
         int index;
+<<<<<<< HEAD
         SqlConnection conn = new SqlConnection("Server = tcp:ozen.database.windows.net,1433; Initial Catalog = DB_aula1; Persist Security Info = False; User ID = flad8; Password = D4DN9zc1; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;");
+=======
+        SqlConnection conn = new SqlConnection(@"Server=tcp:tab132.database.windows.net,1433;Initial Catalog=esporte;Persist Security Info=False;User ID=mateus383;Password=123456sS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+>>>>>>> 4ce4e1f76e1a9d338350daa87659df62bbc84a8b
 
         /*
          * DataBind() - vincula o DataSource com o dropDownList, ou seja, agora que ele tinha os valores
@@ -75,7 +79,13 @@ namespace site
                 {
                     using (conn)
                     {
+<<<<<<< HEAD
                         conn.Open();
+=======
+                        using (conn)
+                        {
+                            conn.Open();
+>>>>>>> 4ce4e1f76e1a9d338350daa87659df62bbc84a8b
 
                         using (SqlCommand cmd = new SqlCommand("SELECT login FROM usuario WHERE login = @login;", conn))
                         {
