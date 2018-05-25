@@ -53,7 +53,6 @@ namespace site
                         if (dr.HasRows)
                             {
                                 codCargo = dr.GetInt32(2);
-
                                 if (codCargo == 1)//Se for funcionário, codCargo = 1, então vai pra página dele
                                 {
                                     Response.Redirect("http://localhost:2616/Home.aspx");
