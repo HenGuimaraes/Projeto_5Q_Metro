@@ -1,4 +1,4 @@
-&nbsp; <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="site.Registro" %>
+﻿&nbsp; <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="site.Registro" %>
 
 <!DOCTYPE html>
 
@@ -12,19 +12,18 @@
 <body>
     <form id="form1" runat="server">
             <div class="modalCadastro">
-                <h1 align="center">Cadastro de usuários</h1>
+                <h1>Cadastro de usuários</h1>
                 <div id="corpo">
                     <%-- Botoões, campos e dropDownList --%>
                     <asp:TextBox placeholder="Digite o nome completo" ID="txtNome" runat="server" /> 
                     
                     <asp:TextBox runat="server" ID="txtLogin" placeholder="Digite o login"/>
 
-                    <asp:TextBox placeholder="Digite a senha" runat="server" ID="txtSenha" />
+                    <asp:TextBox placeholder="Digite a senha" textMode="Password" runat="server" ID="txtSenha" />
                
-                    <asp:TextBox placeholder="Confirme a senha" runat="server" ID="txtConfirmarSenha" />
+                    <asp:TextBox placeholder="Confirme a senha" textMode="Password" runat="server" ID="txtConfirmarSenha" />
                  
-                    <asp:DropDownList ID="dropDownList" runat="server" AppendDataBoundItems="true"
-                        OnSelectedIndexChanged="dropDownList_SelectedIndexChanged"/>
+                    <asp:DropDownList ID="dropDownList" runat="server" AppendDataBoundItems="true"/>
                     <!-- Botão para cadastrar -->
                     <asp:Button Text="Confirmar" runat="server" ID="btnConfirmar" OnClick="btnConfirmar_Click" />
                     <!--Mensagem de erro -->

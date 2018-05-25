@@ -28,6 +28,9 @@ namespace site
             //Esse IF faz com que o Load só rode na primeira vez que a página é carregada
             if(IsPostBack == true)
             {
+                //preciso arrumar postback das senhas
+                //txtSenha.Attributes["value"] = txtSenha.Text;
+                //txtSenha.Attributes["value"] = txtConfirmarSenha.Text;
                 return;
             }
 
@@ -56,14 +59,17 @@ namespace site
        
         protected void btnConfirmar_Click(object sender, EventArgs e)
         {
+            
+
             if (txtNome.Text != "" && txtLogin.Text != "" && txtSenha.Text != "" && txtConfirmarSenha.Text != ""
-               && index != 0)
+               && dropDownList.SelectedIndex != 0)
             {
                 if (string.IsNullOrWhiteSpace(txtLogin.Text) || string.IsNullOrWhiteSpace(txtSenha.Text)
                     || string.IsNullOrWhiteSpace(txtConfirmarSenha.Text))
                 {
                     lblErro.Text = "Não é permitido espaços nos campos de Login e Senhas";
                     lblErro.Visible = true;
+                    return;
                 }
                 else
                 {
@@ -71,14 +77,16 @@ namespace site
                     {
                         conn.Open();
 
-                        using (SqlCommand cmd = new SqlCommand("SELECT login FROM usuario WHERE login = @login;"))
+                        using (SqlCommand cmd = new SqlCommand("SELECT login FROM usuario WHERE login = @login;", conn))
                         {
                             cmd.Parameters.AddWithValue("@login", txtLogin.Text);
-                            String login = (String)cmd.ExecuteScalar();
+                            String login = Convert.ToString(cmd.ExecuteScalar());
                             
                             if(login == txtLogin.Text)
                             {
                                 lblErro.Text = "Não é possivel cadastrar, o login digitado já existe!!";
+                                lblErro.Visible = true;
+                                return;
                             }
                             else
                             {
@@ -101,6 +109,7 @@ namespace site
                                 {
                                     lblErro.Text = "As senhas não estão iguais";
                                     lblErro.Visible = true;
+                                    return;
                                 }
                             }
                         }
@@ -112,14 +121,8 @@ namespace site
             {
                 lblErro.Text = "Preencha todos os campos!!";
                 lblErro.Visible = true;
+                return;
             }
-        }
-
-        //Evento de quando você seleciona algo do dropDownList
-        protected void dropDownList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Captura o indice quando selecionado o item
-            index = dropDownList.SelectedIndex;
         }
     }
 }
