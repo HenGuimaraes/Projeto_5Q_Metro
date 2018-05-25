@@ -12,6 +12,7 @@ namespace site
     public partial class Registro : System.Web.UI.Page
     {
         int index;
+        SqlConnection conn = new SqlConnection(@"Server=tcp:tab132.database.windows.net,1433;Initial Catalog=esporte;Persist Security Info=False;User ID=mateus383;Password=123456sS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
         /*
          * DataBind() - vincula o DataSource com o dropDownList, ou seja, agora que ele tinha os valores
@@ -34,11 +35,11 @@ namespace site
             lblErro.Visible = false;
 
             //Preenchendo o dropDownList com os cargos do banco de dados.
-            using (SqlConnection conString = new SqlConnection("Server=tcp:ozen.database.windows.net,1433;Initial Catalog=DB_aula1;Persist Security Info=False;User ID=flad8;Password=D4DN9zc1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
+            using (conn)
             {
-                conString.Open();
+                conn.Open();
 
-                using (SqlCommand codigoSql = new SqlCommand("SELECT cod_cargo, nome_cargo FROM Cargo;", conString))
+                using (SqlCommand codigoSql = new SqlCommand("SELECT cod_cargo, nome_cargo FROM Cargo;", conn))
                 {
                     dropDownList.Items.Insert(0, "Selecione o cargo");//Inserindo um novo item, nome autoexplicativo.
 
@@ -68,7 +69,7 @@ namespace site
                 {
                     if (txtSenha.Text == txtConfirmarSenha.Text)
                     {
-                        using (SqlConnection conn = new SqlConnection("Server = tcp:ozen.database.windows.net,1433; Initial Catalog = DB_aula1; Persist Security Info = False; User ID = flad8; Password = D4DN9zc1; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;"))
+                        using (conn)
                         {
                             conn.Open();
 
