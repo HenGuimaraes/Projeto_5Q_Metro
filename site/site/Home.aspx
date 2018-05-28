@@ -20,6 +20,11 @@
         var options = {
                 'backgroundColor': 'transparent'
         };
+
+            function noReload() {
+                
+            }
+
         function desenharGrafico() {
             if (data == null) {
                 data = new google.visualization.DataTable();
@@ -74,9 +79,9 @@
                     
                     <asp:TextBox runat="server" ID="txtLogin" placeholder="Digite o login"/>
 
-                    <asp:TextBox placeholder="Digite a senha" runat="server" ID="txtSenha" />
+                    <asp:TextBox placeholder="Digite a senha" runat="server" TextMode="Password" ID="txtSenha" />
                
-                    <asp:TextBox placeholder="Confirme a senha" runat="server" ID="txtConfirmarSenha" />
+                    <asp:TextBox placeholder="Confirme a senha" runat="server" TextMode="Password" ID="txtConfirmarSenha" />
                  
                     <asp:DropDownList ID="dropDownList" runat="server" AppendDataBoundItems="true"/>
                     <!-- Botão para cadastrar -->

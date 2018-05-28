@@ -30,9 +30,8 @@ namespace site
             //Esse IF faz com que o Load só rode na primeira vez que a página é carregada
             if (IsPostBack == true)
             {
-                //preciso arrumar postback das senhas
-                //txtSenha.Attributes["value"] = txtSenha.Text;
-                //txtSenha.Attributes["value"] = txtConfirmarSenha.Text;
+                txtSenha.Attributes["value"] = txtSenha.Text;
+                txtSenha.Attributes["value"] = txtConfirmarSenha.Text;
                 return;
             }
 
@@ -61,8 +60,6 @@ namespace site
 
         protected void btnConfirmar_Click(object sender, EventArgs e)
         {
-
-
             if (txtNome.Text != "" && txtLogin.Text != "" && txtSenha.Text != "" && txtConfirmarSenha.Text != ""
                && dropDownList.SelectedIndex != 0)
             {
@@ -102,7 +99,7 @@ namespace site
                                             codigoSql.Parameters.AddWithValue("@nome", txtNome.Text);
                                             codigoSql.Parameters.AddWithValue("@login", txtLogin.Text);
                                             codigoSql.Parameters.AddWithValue("@senha", txtSenha.Text);
-                                            codigoSql.Parameters.AddWithValue("@cargo", index);
+                                            codigoSql.Parameters.AddWithValue("@cargo", dropDownList.SelectedIndex);
                                             codigoSql.ExecuteNonQuery();
                                         }
                                     }

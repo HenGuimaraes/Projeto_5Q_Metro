@@ -8,6 +8,14 @@
     <title></title>
     <link rel="stylesheet" href="css/cadUsuario.css"/>
     <link rel="icon" href="img/logo-2.png"/><!--icone da pagina-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+<%--    <script type="text/javascript"  lang="js">
+        $(function () {
+            $("#<%=txtNome.ClientID %>").keypress(function () {
+                alert("Wow; Its Work!.")
+            });
+        });
+    </script> --%>
 </head>
 <body>
     <form id="form1" runat="server">

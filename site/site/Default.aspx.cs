@@ -16,8 +16,13 @@ namespace site
 
         protected void Page_Load(object sender, EventArgs e)
         {
-			  lblInvalido.Visible = false;
-			  txtLogin.Focus();
+            if (IsPostBack == true) {
+                txtSenha.Attributes["value"] = txtSenha.Text;
+                return;
+            }
+
+            lblInvalido.Visible = false;
+            txtLogin.Focus();
         }
 
 		protected void btnEntrar_Click(object sender, EventArgs e) 

@@ -15,6 +15,7 @@ namespace site
         {
             // Código que é executado na inicialização do aplicativo
             GlobalConfiguration.Configure(WebApiConfig.Register);
+
         }
     }
 }
