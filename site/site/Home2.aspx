@@ -7,14 +7,14 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="~/css/home22.css" rel="stylesheet" type="text/css" runat="server"/>
+    <link href="/css/home2.css" rel="stylesheet" type="text/css" runat="server"/>
 </head>
 <body>
     <form id="form1" runat="server">
         <header>
             <img id="logomenu" src="img/logo-2.png"/>
             <div class="dropdown">
-                <asp:Button Text="dropdown" runat="server" ID="dropbtn"/>
+                <asp:Button Text="dropdown" runat="server" ID="dropbtn" OnClientClick="return false;"/>
               <div class="dropdown-content">
                 <a href="#">Link 1</a>
                 <a href="#">Link 2</a>
