@@ -1,5 +1,4 @@
-﻿
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home2.aspx.cs" Inherits="site.Home2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home2.aspx.cs" Inherits="site.Home2" %>
 
 <!DOCTYPE html>
 
@@ -7,7 +6,16 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="/css/home2.css" rel="stylesheet" type="text/css" runat="server"/>
+    <link href="/css/home3.css" rel="stylesheet" type="text/css" runat="server"/>
+    <script type="text/javascript">
+        var btn = document.getElementById("botao");
+        btn.onclick = function () {
+            if (btn.style.display == none) {
+                btn.style.display = block;
+            } else {
+                btn.style.display = none;
+            }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
