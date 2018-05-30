@@ -86,7 +86,6 @@
     <Content Include="css\5qRe.css" />
     <Content Include="css\cadUsuario.css" />
     <Content Include="css\home.css" />
-    <Content Include="css\homeAdm.css" />
     <Content Include="css\login.css" />
     <Content Include="css\pagina.css" />
     <Content Include="css\pagina1.css" />

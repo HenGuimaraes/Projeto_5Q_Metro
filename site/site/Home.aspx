@@ -13,46 +13,42 @@
         <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript">
-        google.charts.load('current', { packages: ['corechart', 'line'] });
-        google.charts.setOnLoadCallback(desenharGrafico);
+            google.charts.load('current', { packages: ['corechart', 'line'] });
+            google.charts.setOnLoadCallback(desenharGrafico);
 
-        var total = 0, grafico = null, data = null;
-        var options = {
-                'backgroundColor': 'transparent'
-        };
+            var total = 0, grafico = null, data = null;
+            var options = {
+                    'backgroundColor': 'transparent'
+            };
 
-            function noReload() {
-                
+            function desenharGrafico() {
+                if (data == null) {
+                    data = new google.visualization.DataTable();
+                    data.addColumn('number', 'Tempo');
+                    data.addColumn('number', 'ºC');
+
+                    grafico = new google.visualization.LineChart(document.getElementById('grafico'));
+                }
+
+                grafico.draw(data,options, { title: "Temperaturas em Tempo Real" });
+
+                setTimeout(function () {
+                    $.ajax({
+                        type: 'POST',
+                        dataType: 'json',
+                        contentType: 'application/json',
+                        url: 'home.aspx/TemperaturaAtual',
+                        data: '{}',
+                        success: function (response) {
+                            data.addRow([total, response.d]);
+                            total++;
+                            desenharGrafico();
+                        },
+                        error: function () {
+                        }
+                    });
+                }, 1000);
             }
-
-        function desenharGrafico() {
-            if (data == null) {
-                data = new google.visualization.DataTable();
-                data.addColumn('number', 'Tempo');
-                data.addColumn('number', 'ºC');
-
-                grafico = new google.visualization.LineChart(document.getElementById('grafico'));
-            }
-
-            grafico.draw(data,options, { title: "Temperaturas em Tempo Real" });
-
-            setTimeout(function () {
-                $.ajax({
-                    type: 'POST',
-                    dataType: 'json',
-                    contentType: 'application/json',
-                    url: 'home.aspx/TemperaturaAtual',
-                    data: '{}',
-                    success: function (response) {
-                        data.addRow([total, response.d]);
-                        total++;
-                        desenharGrafico();
-                    },
-                    error: function () {
-                    }
-                });
-            }, 1000);
-        }
     </script>
     </head>
 <body> 

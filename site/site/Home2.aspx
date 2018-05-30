@@ -8,13 +8,15 @@
     <title></title>
     <link href="/css/home3.css" rel="stylesheet" type="text/css" runat="server"/>
     <script type="text/javascript">
-        var btn = document.getElementById("botao");
-        btn.onclick = function () {
-            if (btn.style.display == none) {
-                btn.style.display = block;
+        function showDropDownMenu() {
+            var btn = document.getElementById(<%=dropbtn.ClientID%>);
+            var dropdown = document.getElementById("dropdown-content");
+            if (dropdown.style.display == "none") {
+                dropdown.style.display = "block";
             } else {
-                btn.style.display = none;
+                dropdown.style.display = "none";
             }
+        }
     </script>
 </head>
 <body>
@@ -22,8 +24,8 @@
         <header>
             <img id="logomenu" src="img/logo-2.png"/>
             <div class="dropdown">
-                <asp:Button Text="dropdown" runat="server" ID="dropbtn" OnClientClick="return false;"/>
-              <div class="dropdown-content">
+                <asp:Button Text="dropdown" runat="server" ID="dropbtn" ClientIDMode="Static"/>
+              <div id="dropdown-content">
                 <a href="#">Link 1</a>
                 <a href="#">Link 2</a>
                 <a href="#">Link 3</a>

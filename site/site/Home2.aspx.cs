@@ -11,7 +11,7 @@ namespace site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "showDropDownMenu()", true);
         }
     }
 }

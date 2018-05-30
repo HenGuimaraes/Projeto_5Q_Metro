@@ -42,7 +42,7 @@ header{
     float:right;
 }
 
-.dropdown-content {
+#dropdown-content {
 	display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -51,14 +51,14 @@ header{
     z-index: 1;
 }
 
-.dropdown-content a {
+#dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover {	
+#dropdown-content a:hover {	
 	background-color: #f1f1f1
 }
 
