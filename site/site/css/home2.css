@@ -1,0 +1,105 @@
+html, body, form{
+	/*zerando valores de todos elementos pais*/
+	margin:0;
+	padding:0;
+	border: 0;
+
+/*	cada um dos elementos vai ocupar a tela toda, assim eu posso manipular os elementos filhos do form do jeito que eu quiser, conseguindo
+	saber onde começa e termina a viewport*/
+	min-height: 100vh;
+}
+
+body form{
+	display:flex;/*Aplicando flexbox no container, display do CSS 3 para eu poder mexer no layout do site com facilidade*/
+	flex-direction: column;/*Todos os elementos filhos do form irão ficar um sobre o outro, igual a uma coluna*/
+}
+
+header{
+	border-bottom:1px solid black;
+	height: 70px;
+	width: 100%;
+}
+
+#logomenu{
+	height: 70px;
+	width: 80px;
+}
+
+#dropbtn {
+    background-color: #262626;
+    color: white;
+    /*padding: 16px;*/
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: 70px;
+    width: 150px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float:right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+}
+
+.dropdown:active .dropdown-content {
+    display: block;
+}
+
+.dropdown:active #dropbtn {
+    background-color: #000000;
+}
+
+#corpo{
+	border-top: 1px solid black;
+	flex:1 254px;/*Esse código faz com que o elemento ocupe todo o restante da página, o que sobra vira o tamanho dele*/
+	display: inherit;
+	justify-content: center;
+	align-items: center;
+}
+
+#corpo img, button {
+	float:left;
+	height: 50px;
+}
+
+.header-site{
+    height: 220px;
+    width: 100%;
+    background-image: url(../img/marginalpinheiros.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+footer{
+	border-top:1px solid black;	
+	height: 90px;
+	width: 100%;
+	text-align: center;
+	color: white;
+	background-color: #262626;
+}
+
+footer p{
+	margin: 8px 0;
+}

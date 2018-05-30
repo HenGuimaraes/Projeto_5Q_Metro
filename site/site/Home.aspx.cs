@@ -35,6 +35,8 @@ namespace site
                 return;
             }
 
+            //Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "showDropDownMenu()", true);
+
             //Escondendo a label do erro, vai aparecer só quando tiver ERRO
             lblErro.Visible = false;
 
@@ -153,8 +155,6 @@ namespace site
                 }
 
             }
-
-
         }
     }
 }
