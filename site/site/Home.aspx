@@ -115,9 +115,9 @@
 	    <!--div e botões -->
             <div class="corpo">
 		    <img src="img/icone12.png" class="icone2" style="margin-left:28%">
-		    <button type="button" class="icone" id="myBtn">Grafico</button>
+		    <button type="button" class="icone" id="myBtn1">Grafico</button>
 		    <img src="img/icone12.png" class="icone2" style="margin-left:12%">
-            <button type="button" class="icone" id="botao" >Cadastrar usuários</button>
+            <button type="button" class="icone" id="myBtn2" >Cadastrar usuários</button>
         </div>
             
 	    <!--footer-->
@@ -141,7 +141,7 @@
                     var modal = document.getElementById('myModal');
 
                     // pega o botão que abre o modal
-                    var btn = document.getElementById('myBtn');
+                    var btn = document.getElementById('myBtn1');
 
                     // botão de feichar o modalx
                     var span = document.getElementsByClassName('close')[0];
@@ -168,7 +168,7 @@
                     var modal2 = document.getElementById('modalteste');
 
                     // pega o botão que abre o modal
-                    var btn1 = document.getElementById('botao');
+                    var btn1 = document.getElementById('myBtn2');
                     // botão de feichar o modal
                     var span2 = document.getElementsByClassName('feichar')[0];
 

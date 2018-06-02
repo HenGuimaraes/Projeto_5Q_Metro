@@ -7,20 +7,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="/css/home3.css" rel="stylesheet" type="text/css" runat="server"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <link rel="stylesheet" type="text/css" runat="server" href="/css/home2.css"/>
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-        function showDropDownMenu() {
-            var btn = document.getElementById(<%=dropbtn.ClientID%>);
+        /*function showDropDownMenu() {
+            var btn = document.getElementById();
             var dropdown = document.getElementById("dropdown-content");
             if (dropdown.style.display == "none") {
                 dropdown.style.display = "block";
             } else {
                 dropdown.style.display = "none";
             }
-        }
+        }*/
 
         google.charts.load('current', { packages: ['corechart', 'line'] });
         google.charts.setOnLoadCallback(desenharGrafico);
@@ -63,8 +63,8 @@
 <body>
     <form id="form1" runat="server">
         <!-- modal do gráfico -->
-        <div id="myModal" class="modal">
-	        <div class="modal-content">
+        <div id="myModal">
+	        <div class="modal-content" id="modal-grafico">
                 <span class="close">&times;</span>
                 <div id="grafico" style="height:80%; width:98.6%">
                     <br />
@@ -73,8 +73,8 @@
             </div>
         </div>
         <!-- modal da tela de cadastro -->
-		<div id="modalteste" class="modal2">
-            <div class="modal-cadastro">
+		<div id="myModal2">
+            <div class="modal-content" id="modal-cadastro">
                 <span class="feichar">&times;</span><!-- "botão" de fechar a modal-->
                 <div class="modalCadastro">
                     <h1 align="center">Cadastro de usuários</h1>
@@ -90,7 +90,7 @@
                  
                         <asp:DropDownList ID="dropDownList" runat="server" AppendDataBoundItems="true"/>
                         <!-- Botão para cadastrar -->
-                        <asp:Button Text="Confirmar" runat="server" ID="btnConfirmar" OnClick="btnConfirmar_Click" UseSubmitBehavior="false" />
+                        <asp:Button Text="Confirmar" runat="server" CssClass="btn btn-default" ID="btnConfirmar" OnClick="btnConfirmar_Click" UseSubmitBehavior="false" />
                         <!--Mensagem de erro -->
                         <asp:Label Text="" runat="server" ID="lblErro"/>
                     </div>
@@ -99,23 +99,43 @@
 		</div>   
         <!--Cabeçalho com menu dropdown e a logo-->
         <header>
-            <img id="logomenu" src="img/logo-2.png"/>
-            <div class="dropdown">
-                <asp:Button Text="dropdown" runat="server" ID="dropbtn" ClientIDMode="Static"/>
-              <div id="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div>
-            </div>
+            <nav class="navbar navbar-default" style="margin-bottom:0; background-color:white">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <img class="navbar-brand" id="logoIcon" src="img/logo-2.png"/>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Henrique <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <button type="button" class="btn btn-default" id="myBtn3" ><i class="fas fa-cog"></i>  Cadastrar usuários</button>
+                                    <button type="button" class="btn btn-default" id="myBtn4" ><i class="fas fa-cog"></i>  Cadastrar trens e vagões</button>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#" id="sair">Sair</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
         </header>
         <!--Imagem que fica abaixo do cabeçalho-->
-        <section class="header-site"></section>
+        <section class="backImg"></section>
         <!--Corpo do site, onde fica os únicos dois botões principais-->
-        <main>
-            <div id="btn-conteiner">
-		        <button type="button" class="icone" id="myBtn"><i class="fa fa-cog"></i>Grafico</button>
-                <button type="button" class="icone" id="botao" ><i class="fa fa-cog"></i>Cadastrar usuários</button>
+        <main id="main">
+            <div>
+		        <button type="button" class="btn btn-default" id="myBtn1"><i class="fas fa-chart-area"></i>   Temperatura em tempo real</button>
+                <button type="button" class="btn btn-default" id="myBtn2" ><i class="fas fa-table"></i>   Trens, vagões e arduinos</button>
             </div>
         </main>
         <!--Rodapé-->
@@ -123,6 +143,10 @@
             <p>Site feito por: Alice Coelho | Henrique Guimarães | Jean Sales | Lucas Nascimento | Mateus Soares</p>
             <p>Contato: 5Q@gmail.com | (11)11111-1111 | (11)1111-1111</p>
         </footer>
+
+
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <!--Scripts que abrem e fecham as modais-->
         <!--Modal do gráfico-->
         <script>
@@ -130,7 +154,7 @@
             var modal = document.getElementById('myModal');
 
             // pega o botão que abre o modal
-            var btn = document.getElementById('myBtn');
+            var btn = document.getElementById('myBtn1');
 
             // botão de feichar o modalx
             var span = document.getElementsByClassName('close')[0];
@@ -155,10 +179,10 @@
         <!--Modal da tela de cadastro-->
         <script>
             // pega o modal
-            var modal2 = document.getElementById('modalteste');
+            var modal2 = document.getElementById('myModal2');
 
             // pega o botão que abre o modal
-            var btn1 = document.getElementById('botao');
+            var btn1 = document.getElementById('myBtn3');
             // botão de feichar o modal
             var span2 = document.getElementsByClassName('feichar')[0];
 
