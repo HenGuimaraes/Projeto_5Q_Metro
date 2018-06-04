@@ -65,7 +65,7 @@ namespace site
         {
 
             a++;
-            if (a >= 2)
+            if (IsPostBack == true)
             {
                 trens.Items.Clear();
             }
