@@ -1,0 +1,76 @@
+#divao {/*div*/
+background-color:transparent;
+width:20%;
+height:15%;
+position:absolute;
+top:25%;
+left:20%;
+margin-left: 15%;
+padding: 1%;
+
+}
+#metro{/*div*/
+background-color:transparent;
+width:20%;
+height:20%;
+position:absolute;
+top:44.5%;
+left:15%;
+margin-left: 20%;
+padding: 1%;
+}
+
+hr{
+    padding: 2%;
+}
+
+
+#divMae{
+    background-color: #DCDCDC;
+    padding: 3%;
+    margin-top: 11%;
+    width: 250px;
+    height: 250px;
+    margin-left: 33.7%;   
+}
+
+#Trem, #linha{ /*text box-trem*/
+    width: 93%;
+    padding: 3%;
+    height: 8px;
+    margin-top: 1px;
+}
+
+
+#nomevagao, #quantidade{/*text box-vagoes*/
+    width: 93%;
+    padding: 3%;
+    height: 8px;
+    margin-top: 1px;
+}
+#trens{/*menu dropdonw-vagoes*/
+    margin-top: 1%;
+    width: 100.2%;
+    height: 17%;
+    margin-bottom: 2%;
+    
+}
+
+#registrotrem{/*botao-trem*/
+    padding: 3%;
+    margin-top: 10px;
+    width: 100.2%;
+    background-color: #1E90FF;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+#Button1{/*botao-vagoes*/
+    padding: 3%;
+    margin-top: 5px;
+    width: 100.2%; 
+    background-color: #1E90FF;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+}
