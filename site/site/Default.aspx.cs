@@ -11,7 +11,6 @@ namespace site
 {
     public partial class Default : System.Web.UI.Page
     {
-
         SqlConnection conn = new SqlConnection("Server=tcp:ozen.database.windows.net,1433;Initial Catalog=DB_aula1;Persist Security Info=False;User ID=flad8;Password=D4DN9zc1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
         protected void Page_Load(object sender, EventArgs e)
