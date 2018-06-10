@@ -20,7 +20,7 @@ body form{
     padding: 0;
 }
 
-/*Css para estilizar os outros dois botões da dropdown*/
+/* Css para estilizar os 3 botões da dropdown */
 #btnCadUsu, #btnCadTrens{
     border:0;
     width: 100%;
@@ -34,19 +34,24 @@ body form{
     color: black;
 }
 
-/*Css do botão sair da dropdown*/
-#sair{
+#btnSair{
     color: #777;
 }
 
-/*Imagem de fundo que fica abaixo do cabeçalho*/
+#btnSair:hover {
+	color: black;
+}
+
+/* Imagem de fundo que fica abaixo do cabeçalho */
 .backImg{
     height: 270px;
     width: 100%;
     background-image: url(../img/marginalpinheiros.jpg);
     background-position: center;
+    background-size: cover;
 }
 
+/* Corpo central da página, onde se encontra os dois botões principais */
 #main{
 	border-top: 1px solid black;
 	flex:1 200px;/*Esse código faz com que o elemento ocupe todo o restante da página, o que sobra vira o tamanho dele*/
@@ -71,6 +76,7 @@ body form{
     margin-right: 15px;
 }
 
+/* Rodapé */
 footer{
 	border-top:1px solid black;	
 	height: 90px;
@@ -83,8 +89,9 @@ footer{
 footer p{
 	margin: 8px 0;
 }
+
 /* modal fundo */
-#myModal, #myModal3 {
+#myModal1, #myModal2, #myModal3, #myModal4 {
     display: none; /* none por padrão */
     position: fixed; /* fixa o modal na tela */
     z-index: 20; /* fica no topo */
@@ -97,6 +104,7 @@ footer p{
 }
 
 /* Modal conteudo/Box */
+/* Estilo da modal do gráfico */
 #modal-grafico {
     /*background-color:aliceblue;*/
     margin: 6% auto; /* 15% do topo e centralizado */
@@ -105,16 +113,29 @@ footer p{
     height:70%;
     width: 70%; /* pode ser mais ou menos de 70% dependendo da tela */
 }
-#modal-cadastro{
+
+/* Estilo da modal que tem as tabelas de arduinos e vagões */
+#modal-tabela {
     /*background-color:aliceblue;*/
-    margin: 6% auto; /* 15% do topo e centralizado */
+    margin: 6% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    height:70%;
+    width: 70%;
+}
+
+/* Estilo da modal de cadastro do usuário */
+#modal-cadastro-usuario{
+    /*background-color:aliceblue;*/
+    margin: 6% auto;
     padding: 20px;
     border: 1px solid #888;
     height:80%;
-    width: 50%; /* pode ser mais ou menos de 70% dependendo da tela */
+    width: 50%;
+    min-width: 300px;
 }
 
-.modalCadastro {
+#modalCadastro {
     display: flex;
     margin: 6% auto;
     flex-direction: column;
@@ -122,7 +143,7 @@ footer p{
     height: 100%;
 }
 
-.modalCadastro #corpo {
+#modalCadastro #corpo-cadastro {
     display: inherit;
     flex-direction: column;
     border-top: 1px solid black;
@@ -130,7 +151,7 @@ footer p{
     margin: 0 auto;
 }
 
-.modalCadastro #corpo 
+#modalCadastro #corpo-cadastro 
 #txtNome,
 #txtLogin,
 #txtSenha,
@@ -141,45 +162,43 @@ footer p{
     width: 400px;
 }
 
-.modalCadastro #corpo #dropDownList {
+#modalCadastro #corpo-cadastro #dropDownList {
     width: 200px;
     padding: 5px 0;
 }
 
-.modalCadastro #btnConfirmar, #lblErro{
+#modalCadastro #btnConfirmar, #lblErro{
     margin: auto;
 }
 
-.modalCadastro #btnConfirmar {
+#modalCadastro #btnConfirmar {
     padding:10px 0;
     width: 200px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+/* Estilo da modal de cadastro de trens e vagões */
+#modal-cadastro-trens {
+    /*background-color:aliceblue;*/
+    margin: 6% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    height:70%;
+    width: 70%;
+}
+
 /* botao feichar */
-.close {
+.close, .close2, .close3, .close4 {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.feichar {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.feichar:hover,
-.feichar:focus {
+.close:hover, .close2:hover, .close3:hover, .close4:hover,
+.close:focus, .close2:focus, .close3:focus, .close4:focus
+ {
     color: black;
     text-decoration: none;
     cursor: pointer;

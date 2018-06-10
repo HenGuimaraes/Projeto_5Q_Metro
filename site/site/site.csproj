@@ -89,6 +89,8 @@
     <Content Include="css\cadUsuario.css" />
     <Content Include="css\fontawesome-all.min.css" />
     <Content Include="css\home.css" />
+    <Content Include="css\home2.css" />
+    <Content Include="css\home3.css" />
     <Content Include="css\login.css" />
     <Content Include="css\pagina.css" />
     <Content Include="css\pagina1.css" />
@@ -97,14 +99,23 @@
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Home2.aspx" />
+    <Content Include="img\fundoLogin.jpg" />
+    <Content Include="img\geo-berrini.jpg" />
+    <Content Include="img\logo-2.png" />
+    <Content Include="img\logo_bandtec_ds_azul.png" />
+    <Content Include="img\marginalpinheiros.jpg" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="js\modal.js" />
     <Content Include="js\npm.js" />
     <Content Include="pagina1.aspx" />
     <Content Include="registro.aspx" />
     <Content Include="tabelasevagoes.aspx" />
     <Content Include="Web.config" />
+    <Content Include="webfonts\fa-brands-400.svg" />
+    <Content Include="webfonts\fa-regular-400.svg" />
+    <Content Include="webfonts\fa-solid-900.svg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -159,17 +170,29 @@
     <Content Include="css\bootstrap.css.map" />
     <Content Include="css\bootstrap.min.css.map" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\5qteste - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="webfonts\fa-brands-400.eot" />
+    <Content Include="webfonts\fa-brands-400.ttf" />
+    <Content Include="webfonts\fa-brands-400.woff" />
+    <Content Include="webfonts\fa-brands-400.woff2" />
+    <Content Include="webfonts\fa-regular-400.eot" />
+    <Content Include="webfonts\fa-regular-400.ttf" />
+    <Content Include="webfonts\fa-regular-400.woff" />
+    <Content Include="webfonts\fa-regular-400.woff2" />
+    <Content Include="webfonts\fa-solid-900.eot" />
+    <Content Include="webfonts\fa-solid-900.ttf" />
+    <Content Include="webfonts\fa-solid-900.woff" />
+    <Content Include="webfonts\fa-solid-900.woff2" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="img\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

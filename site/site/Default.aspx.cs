@@ -61,11 +61,11 @@ namespace site
 
                                 if (codCargo == 1)//Se for funcionário, codCargo = 1, então vai pra página dele
                                 {
-                                    Response.Redirect("http://localhost:2616/Home.aspx");
+                                    Response.Redirect("Home.aspx");
                                 }
                                 else//Se for administrador, codCargo = 2, então vai para página dele
                                 {
-                                    Response.Redirect("http://localhost:2616/Home2.aspx");
+                                    Response.Redirect("Home2.aspx");
                                 }
                             }
                         else//Caso contrário, ele errou um dos dois e exibe a mensagem para ele corrigir
