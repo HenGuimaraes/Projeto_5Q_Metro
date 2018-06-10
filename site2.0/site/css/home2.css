@@ -14,78 +14,173 @@ body form{
 	flex-direction: column;/*Todos os elementos filhos do form irão ficar um sobre o outro, igual a uma coluna*/
 }
 
-body form header{
-	border-bottom:1px solid black;
-	height: 70px;
+#logoIcon{
+	height: 50px;
+	width: 50px;
+    padding: 0;
 }
 
-#logomenu{
-	height: 70px;
-	width: 70px;
-}
-
-#dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    /*padding: 16px;*/
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    height: 70px;
-    width: 150px;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    float:right;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 80px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-	background-color: #f1f1f1
-}
-
-.dropdown:active .dropdown-content {
-    display: block;
-}
-
-.dropdown:active #dropbtn {
-    background-color: #3e8e41;
-}
-
-body form #corpo{
-	border:1px solid black;
-	flex-grow: 1;/*Esse código faz com que o elemento ocupe todo o restante da página, o que sobra vira o tamanho dele*/
-}
-
-body form .header-site{
-    height: 300px;
+/*Css para estilizar os outros dois botões da dropdown*/
+#myBtn3, #myBtn4{
+    border:0;
     width: 100%;
-    opacity: 0.5;
+    background-color: transparent;
+    text-align: left;
+    color: #777;
+}
+
+#myBtn3:hover, #myBtn4:hover, #sair:hover{
+    background-color: #e7e7e7;
+    color: black;
+}
+
+/*Css do botão sair da dropdown*/
+#sair{
+    color: #777;
+}
+
+/*Imagem de fundo que fica abaixo do cabeçalho*/
+.backImg{
+    height: 270px;
+    width: 100%;
     background-image: url(../img/marginalpinheiros.jpg);
     background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
-body form footer{
+#main{
+	border-top: 1px solid black;
+	flex:1 200px;/*Esse código faz com que o elemento ocupe todo o restante da página, o que sobra vira o tamanho dele*/
+    width: 100%;
+	display: inherit;
+	justify-content: center;
+	align-items: center;
+}
+
+#main div{
+    margin: 0 20px 0 20px;
+}
+
+#main div button{
+    width: 300px;
+	font-size:20px;
+	padding: 20px 0 20px 0;
+	cursor: pointer;
+}
+
+#main div #myBtn1{
+    margin-right: 15px;
+}
+
+footer{
 	border-top:1px solid black;	
-	height: 100px;
+	height: 90px;
+	width: 100%;
+	text-align: center;
+	color: white;
+	background-color: #262626;
+}
+
+footer p{
+	margin: 8px 0;
+}
+/* modal fundo */
+#myModal, #myModal2 {
+    display: none; /* none por padrão */
+    position: fixed; /* fixa o modal na tela */
+    z-index: 20; /* fica no topo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */ 
+    background-color: rgb(0,0,0); /* cor de fundo */
+    background-color: rgba(0,0,0,0.4); /* preto com opacidade */
+}
+
+/* Modal conteudo/Box */
+#modal-grafico {
+    /*background-color:aliceblue;*/
+    margin: 6% auto; /* 15% do topo e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    height:70%;
+    width: 70%; /* pode ser mais ou menos de 70% dependendo da tela */
+}
+#modal-cadastro{
+    /*background-color:aliceblue;*/
+    margin: 6% auto; /* 15% do topo e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    height:80%;
+    width: 50%; /* pode ser mais ou menos de 70% dependendo da tela */
+}
+
+.modalCadastro {
+    display: flex;
+    margin: 6% auto;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+}
+
+.modalCadastro #corpo {
+    display: inherit;
+    flex-direction: column;
+    border-top: 1px solid black;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+
+.modalCadastro #corpo 
+#txtNome,
+#txtLogin,
+#txtSenha,
+#txtConfirmarSenha
+{
+    margin-bottom: 15px;
+    padding:5px 0;
+    width: 400px;
+}
+
+.modalCadastro #corpo #dropDownList {
+    width: 200px;
+    padding: 5px 0;
+}
+
+.modalCadastro #btnConfirmar, #lblErro{
+    margin: auto;
+}
+
+.modalCadastro #btnConfirmar {
+    padding:10px 0;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* botao feichar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.feichar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.feichar:hover,
+.feichar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

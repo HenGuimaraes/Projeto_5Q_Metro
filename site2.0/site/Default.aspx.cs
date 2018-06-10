@@ -18,8 +18,10 @@ namespace site
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
             lblInvalido.Visible = false;
             txtLogin.Focus();
+
         }
 
 
@@ -44,7 +46,7 @@ namespace site
                         //Com o dataReader eu consigo guardar a consulta em uma variavel, essa consulta vem como um conjunto de dados
                         using (SqlDataReader dr = cmd.ExecuteReader())
                         {
-
+                            
                             //Leia a consulta, após ler eu consigo entender o conjunto de dados que tinha e trabalhar com eles
                             dr.Read();
                             int codCargo = 0;

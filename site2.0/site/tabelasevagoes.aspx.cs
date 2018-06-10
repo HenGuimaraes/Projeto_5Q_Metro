@@ -16,6 +16,7 @@ namespace site
         int nmrvagoes = 0;
         int contador = 0;
         int numeradorvalidador = 0;
+        int conta = 0;
         //contador necessario para nao zerar o vetor, deve ficar fora dos protegidos
         ListItem item;
         protected void Page_Load(object sender, EventArgs e)
@@ -82,7 +83,12 @@ namespace site
                 }             
                 if (Trem.Text == "coloque um nome")
                 {
-                    Trem.Text = "";
+                    Trem.Text = "ta de sacanagem né?";
+                    return;
+                }
+                if (Trem.Text =="ta de sacanagem né?")
+                {
+                    Trem.Text = "coloque um nome";
                     return;
                 }
                 //=====================================================================================//
@@ -115,11 +121,11 @@ namespace site
                 return;
             }
 
-            if (quantidadeDeVagao > 9)
-            {
-                nomevagao.Text = "muitos vagoes";
-                return;
-            }//aqui valida se ele exagerou nos vagoes
+       //    if (quantidadeDeVagao > 9)
+       //    {
+       //        nomevagao.Text = "muitos vagoes";
+       //        return;
+       //    }//aqui valida se ele exagerou nos vagoes
             
 
             while (quantidadeDeVagao > 0)
@@ -134,64 +140,69 @@ namespace site
                 }// aqui valida se ele preencheu o dropdown
                 
                 using (SqlConnection conn = new SqlConnection("Server=tcp:tab132.database.windows.net,1433;Initial Catalog=esporte;Persist Security Info=False;User ID=mateus383@tab132;Password=123456sS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
-            { 
+                { 
                 conn.Open();
+                    string[] vagao = new string[50];
                     using (SqlCommand cmd = new SqlCommand($"SELECT nome_vagao from Vagao where cod_trem={codtrem}", conn))
                     {
+                        int cont = 0;
                         using (SqlDataReader reader = cmd.ExecuteReader())
-                        { 
-                          
-                            //Obtém os registros, um por vez
-                            while (reader.Read() == true)
+                        {
+                            
+                            
+                          while (reader.Read() == true)
                             {
-                                nmrvagoes++;
-                                
-                                numeradorvalidador++;
-                                validator = new string[1+ numeradorvalidador];
-                                nomevagao.Text.ToString();
-                                validator[numeradorvalidador] =nomevagao.Text;
-                                
-                                if (reader.GetString(0) == validator[numeradorvalidador]+" "+ numeradorvalidador )
-                                {// aqui estou igualando ele ao banco de dados, ja que a string se transforma
-                                    nomevagao.Text = "o vagao ja existe tente outro";
-                                    return;
-                                }// aqui valida se o vagao ja tem nomeação igual
-                            }
-                            int A=0;
-                            int b=0;
-                            while (b < numeradorvalidador || b<valtrem)
-                            {
-                                
-                                string valida=validator[b];
-                                string valida1;
-                                while (numeradorvalidador > A || A < valtrem)
-                                {
-                                    A++;
-                                    valtrem++;
-                                    valida1 = validator[valtrem];
-                                    if (b != valtrem)
-                                    {
-                                        if (valida == valida1)
-                                        {
-                                            Trem.Text = "ja tm";
 
-                                            // cmd.Parameters.AddWithValue("@nome_vagao", "a" + " " + contador);
-                                        }
-                                    }
-                                       
-                                    
-                                }
-                                b++;
+                                
+                                vagao[cont] = reader.GetString(0);
+                                cont++;
                             }
-                            cmd.Parameters.AddWithValue("@nome_vagao", "a" + " " + contador);
+                            
+                            
+                           
                         }
+                        
+                        int pola = cont;
+                        string[] capivara = new string[50];
+                        while (pola > 0)
+                        {
+                           capivara[pola] = nomevagao.Text + " " + pola;
+                            pola = pola - 1;
+                        }
+                        
+                        while (cont > 0)
+                        {
+                            
+                            int cont1 = cont;
+                            while (cont1 > 0)
+                            {
+                                
+                                if (vagao[cont] ==capivara[cont1])
+                                {
+                                    nomevagao.Text = "vagao ja existe";
+                                    return;
+
+                                }
+                                cont1 = cont1 - 1;
+                            }
+                            cont = cont - 1;
+                        }
+                        
+
+                        
                     }
-                  //  if (nmrvagoes >= 9)
-                  //  {
-                  //      Trem.Text = "quantidade de vagoes excedida";
-                  //      return; //valida o numeros de vagoes para nao serem criados infinitos vagoes em um trem
-                  //  }
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO Vagao VALUES (@cod_trem,@nome_vagao)", conn))
+                    
+                   
+                        //  if (nmrvagoes >= 9)
+                        //  {
+                        //      Trem.Text = "quantidade de vagoes excedida";
+                        //      return; //valida o numeros de vagoes para nao serem criados infinitos vagoes em um trem
+                        //  }
+
+
+
+
+                        using (SqlCommand cmd = new SqlCommand("INSERT INTO Vagao VALUES (@cod_trem,@nome_vagao)", conn))
                     {
                          contador++;
                        // string[] nomesVagoes = new string[50  + contador];
@@ -209,6 +220,36 @@ namespace site
                         cmd.ExecuteNonQuery();
                         
                     }//conta a quantidade de vagoes que foram feitos e classifica: trem1,trem2...trem7
+                    using (SqlCommand cmd = new SqlCommand("select max(cod_vagao) from arduino", conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read() == true)
+                            {
+                                conta = reader.GetInt32(0);
+                               // cmd.ExecuteNonQuery();
+
+                            }
+                        }
+                               
+
+                    }
+
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO arduino VALUES (@cod_vagao,@cod_trem)", conn))
+                    {
+                        conta++;
+
+                        string nomesVagoes = nomevagao.Text;
+                        cmd.Parameters.AddWithValue("@cod_vagao", conta);
+                        //seleciona o trem pelo dropdown
+                        cmd.Parameters.AddWithValue("@cod_trem", codtrem);
+                        //gera o nome do vagao, e se for registrado ira começar o vetor
+
+                        quantidadeDeVagao = quantidadeDeVagao - 1;
+
+                       cmd.ExecuteNonQuery();
+
+                    }
                 }
                 
             }

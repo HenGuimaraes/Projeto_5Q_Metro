@@ -168,7 +168,7 @@ footer{
 }
 /* modal fundo */
 .modal {
-    display: none; /* none por padr√£o */
+    display: none; /* none por padr„o */
     position: fixed; /* fixa o modal na tela */
     z-index: 20; /* fica no topo */
     left: 0;
@@ -180,7 +180,7 @@ footer{
 }
 
 .modal2 {
-    display: none; /* none por padr√£o */
+    display: none; /* none por padr„o */
     position: fixed; /* fixa o modal na tela */
     z-index: 20; /* fica no topo */
     left: 0;
@@ -251,7 +251,7 @@ footer{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-/* myBtn1 feichar */
+/* botao feichar */
 .close {
     color: #aaa;
     float: right;
@@ -278,3 +278,21 @@ footer{
         text-decoration: none;
         cursor: pointer;
     }
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+	
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding:8px;
+	border-color:black;
+	
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}

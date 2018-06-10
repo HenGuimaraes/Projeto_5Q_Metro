@@ -81,6 +81,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\5q.css" />
+    <Content Include="css\5q1.css" />
+    <Content Include="css\5qRe.css" />
+    <Content Include="css\home1.css" />
+    <Content Include="css\home3.css" />
+    <Content Include="css\login2.css" />
+    <Content Include="css\Novo Documento de Texto.txt" />
+    <Content Include="css\pagina.css" />
+    <Content Include="css\pagina1.css" />
+    <Content Include="css\registrovagao.css" />
+    <Content Include="css\tabela.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
@@ -159,7 +170,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="css\" />
     <Folder Include="img\" />
     <Folder Include="Models\" />
   </ItemGroup>
