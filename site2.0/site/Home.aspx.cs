@@ -12,19 +12,48 @@ namespace site
     public partial class Home : System.Web.UI.Page
     {
         int index;
-        SqlConnection conn = new SqlConnection(@"Server=tcp:tab132.database.windows.net,1433;Initial Catalog=esporte;Persist Security Info=False;User ID=mateus383;Password=123456sS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-         /*
-         * DataBind() - vincula o DataSource com o dropDownList, ou seja, agora que ele tinha os valores
-         * graças ao DataSource, eu uso o DataBind pra inserir eles no DropDownList, através de dois campos
+        HttpCookie cookie;
 
-         * de referência: DataTextField="cargo_nome" que serviu para passar o texto vindo do banco de dados;
-         *                DataValueField="cod_cargo" que serviu para informar o valor daquele campo.
-         * Os valores dos campos de referência tem que referênciar as colunas que você ta chamando,
-         * ou seja, valor com mesmo nome das colunas.
-         */
+        //SqlConnection conn = new SqlConnection(@"Server=tcp:tab132.database.windows.net,1433;Initial Catalog=esporte;Persist Security Info=False;User ID=mateus383;Password=123456sS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        /*
+        * DataBind() - vincula o DataSource com o dropDownList, ou seja, agora que ele tinha os valores
+        * graças ao DataSource, eu uso o DataBind pra inserir eles no DropDownList, através de dois campos
+
+        * de referência: DataTextField="cargo_nome" que serviu para passar o texto vindo do banco de dados;
+        *                DataValueField="cod_cargo" que serviu para informar o valor daquele campo.
+        * Os valores dos campos de referência tem que referênciar as colunas que você ta chamando,
+        * ou seja, valor com mesmo nome das colunas.
+        */
+        SqlConnection conn = Default.conecao();
         protected void Page_Load(object sender, EventArgs e)
 
         {
+            string cargo, nome;
+            cookie = Request.Cookies["cookie"];
+            if (cookie == null)
+            {
+                Response.Redirect("localhost:2616/default.aspx");
+                return;
+            }
+            nome = cookie.Values["nome"];
+            cargo = cookie.Values["cargo"];
+
+            if (nome == null)
+            {
+
+                Response.Redirect("localhost:2616/default.aspx");
+            }
+            lab1.Text = nome;
+            //aqui ele vai validar se o usuario esta logado, se nao estiver ele nao conseguira entrar no site
+            //se ele tambem nao for administrador ele nao conseguira
+
+
+            label1.Text = Media().ToString() + "Cº";
+            label2.Text = Mediana().ToString() + "Cº";
+            label3.Text = maximo().ToString() + "Cº";
+            label4.Text = minimo().ToString() + "Cº";
+
+
             //Esse IF faz com que o Load só rode na primeira vez que a página é carregada
             if (IsPostBack == true)
             {
@@ -56,11 +85,12 @@ namespace site
 
         protected void btnConfirmar_Click(object sender, EventArgs e)
         {
+            
 
             if (txtNome.Text != "" && txtLogin.Text != "" && txtSenha.Text != "" && txtConfirmarSenha.Text != ""
                && index != 0)
             {
-               
+                
                
                     if (txtSenha.Text == txtConfirmarSenha.Text)
                     {
@@ -105,7 +135,7 @@ namespace site
         {
             int medea = 0;
             int a = 0;
-            using (SqlConnection conn = new SqlConnection(@"Server=tcp:tab132.database.windows.net,1433;Initial Catalog=esporte;Persist Security Info=False;User ID=mateus383;Password=123456sS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
+            SqlConnection conn = Default.conecao();
             {
                 conn.Open();
 
@@ -147,7 +177,7 @@ namespace site
         {// metodo pra pegar a temp minima
             int medea = 0;
             int a = 0;
-            using (SqlConnection conn = new SqlConnection(@"Server=tcp:tab132.database.windows.net,1433;Initial Catalog=esporte;Persist Security Info=False;User ID=mateus383;Password=123456sS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
+            SqlConnection conn = Default.conecao();
             {
                 conn.Open();
 
@@ -192,7 +222,7 @@ namespace site
         {
             int medea = 0;
             int a = 0;
-            using (SqlConnection conn = new SqlConnection(@"Server=tcp:tab132.database.windows.net,1433;Initial Catalog=esporte;Persist Security Info=False;User ID=mateus383;Password=123456sS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
+            SqlConnection conn = Default.conecao();
             {
                 conn.Open();
 
@@ -237,8 +267,9 @@ namespace site
         {
             
             double xa = 0, b=0,medea=0;
-            using (SqlConnection conn = new SqlConnection(@"Server=tcp:tab132.database.windows.net,1433;Initial Catalog=esporte;Persist Security Info=False;User ID=mateus383;Password=123456sS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
-            {
+
+            SqlConnection conn = Default.conecao();
+            { 
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand("SELECT MAX (cod_temperatura) FROM Temperatura", conn))
                 {
@@ -305,7 +336,7 @@ namespace site
         public static double TemperaturaAtual()
         {
 
-            using (SqlConnection conn = new SqlConnection(@"Server=tcp:tab132.database.windows.net,1433;Initial Catalog=esporte;Persist Security Info=False;User ID=mateus383;Password=123456sS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
+            SqlConnection conn = Default.conecao();
             {
                 conn.Open();
 
@@ -330,7 +361,7 @@ namespace site
 
 
         }
-
+        
         protected void timer_Tick(object sender, EventArgs e)
         {
             
@@ -339,6 +370,13 @@ namespace site
             label3.Text = maximo().ToString() + "Cº" ;
             label4.Text = minimo().ToString() + "Cº" ;
             // aqui é onde ele vai envocar os metodos e retornar os valores que eu quero
+        }
+        protected void btnSair_Click(object sender, EventArgs e)
+        {
+            cookie.Expires = DateTime.Now.AddYears(-1); // expira o cookie fazendo o usuario perder o save na pagina
+            Response.Cookies.Set(cookie);
+            Response.Redirect("http://localhost:2616/default.aspx");
+
         }
     }
 }

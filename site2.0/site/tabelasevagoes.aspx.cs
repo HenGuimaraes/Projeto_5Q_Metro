@@ -19,13 +19,11 @@ namespace site
         int conta = 0;
         //contador necessario para nao zerar o vetor, deve ficar fora dos protegidos
         ListItem item;
+        SqlConnection conn = Default.conecao();
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            using (SqlConnection conn = new SqlConnection(@"Server = tcp:tab132.database.windows.net,1433;
-            Initial Catalog = esporte; Persist Security Info = False; User ID = mateus383@tab132; Password = 123456sS;
-            MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30; "))
-            {
+           
                 conn.Open();
                 //=====================================================================================//
                using (SqlCommand cmd = new SqlCommand("SELECT cod_trem,nome_trem From Trem order by cod_trem", conn))
@@ -48,7 +46,7 @@ namespace site
                         }
                     }
                 }
-            }
+            
         }
         protected void registrotrem_Click(object sender, EventArgs e)
         {

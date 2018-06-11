@@ -84,18 +84,29 @@
     <Content Include="css\5q.css" />
     <Content Include="css\5q1.css" />
     <Content Include="css\5qRe.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\cadUsuario.css" />
+    <Content Include="css\home.css" />
     <Content Include="css\home1.css" />
     <Content Include="css\home3.css" />
+    <Content Include="css\login.css" />
     <Content Include="css\login2.css" />
     <Content Include="css\Novo Documento de Texto.txt" />
     <Content Include="css\pagina.css" />
     <Content Include="css\pagina1.css" />
     <Content Include="css\registrovagao.css" />
+    <Content Include="css\registrovagao2.css" />
     <Content Include="css\tabela.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Home2.aspx" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="js\modal.js" />
+    <Content Include="js\npm.js" />
     <Content Include="pagina1.aspx" />
     <Content Include="registro.aspx" />
     <Content Include="tabela.aspx" />
@@ -159,6 +170,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
