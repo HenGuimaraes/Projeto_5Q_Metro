@@ -55,12 +55,41 @@
     <form id="form1" runat="server">
         <!------------------------------Modais-------------------------->
         <!-- modal do gráfico -->
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
         <div id="myModal1">
 	        <div class="modal-content" id="modal-grafico">
                 <span class="close">&times;</span>
+                <!-- esse updatepanel significa que ele vai ficar dando update, ou atualizando de acordo com o tempo
+                que eu der para o <asp:timer> -->
+                <asp:UpdatePanel ID="updatepainel1" runat="server">
+                    <ContentTemplate>
+                        <center>
+                            <!-- tabela das temperaturas -->
+                            <table>
+                                <tr>
+                                    <th> TemperaturaMinima</th>
+                                    <th> TemperaturaMaxima</th>
+                                    <th> Mediana</th>
+                                    <th> Média</th>
+                                </tr>
+                                <tr>
+                                    <td><asp:Label ID="label4" runat="server"></asp:Label></td>
+                                    <td><asp:label ID="label3" runat="server"></asp:label></td>
+                                    <td><asp:label ID="label2" runat="server"></asp:label></td>
+                                    <td><asp:label ID="label1" runat="server"></asp:label></td>
+                                </tr>
+                            </table>
+                        </center>
+                        <!-- aqui é o timer, de 60 em 60 segundos ele ira atualizar a tabela -->
+                        <asp:Timer ID="timer1" runat="server" Interval="60000" OnTick="timer_Tick"></asp:Timer>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                <label style="position:fixed; top:50%; left:18%;" >  Graus </label>
                  <div id="grafico" style="height:80%; width:98.6%"> 
                     <br />
                  </div> 
+                 <center>  <label> Segundos</label> </center>
                 <div style="margin-left:13.5%"></div>
             </div>
         </div>
@@ -156,6 +185,16 @@
         <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/modal.js"></script>
+        <script type="text/javascript">
+            <%
+            if (IsPostBack == true)
+            {
+            %>
+                modal3.style.display = "block";    
+            <% 
+            }
+            %>
+        </script>
     </form>
 </body>
 </html>
