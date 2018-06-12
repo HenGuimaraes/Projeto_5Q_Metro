@@ -16,3 +16,11 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+.backImg{
+    height: 270px;
+    width: 100%;
+    background-image: url(../img/metro.jpg);
+    background-position: center;
+    background-size: cover;
+}

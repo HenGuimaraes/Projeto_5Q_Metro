@@ -71,8 +71,8 @@
                     <center>
                        <table>
                            <tr>
-                               <th> TemperaturaMinima</th>
-                               <th> TemperaturaMaxima</th>
+                               <th> Temperatura Minima</th>
+                               <th> Temperatura Maxima</th>
                                <th> Mediana</th>
                                <th> Média</th>
                            </tr>
@@ -87,16 +87,20 @@
                            
                           </table>
                         </center>
-            <asp:Timer ID="timer1" runat="server" Interval="60000" OnTick="timer1_Tick" ></asp:Timer>
+            <asp:Timer ID="timer1" runat="server" Interval="1200" OnTick="timer1_Tick" ></asp:Timer>
+                       <asp:Timer ID="timer2" runat="server" Interval="1000" OnTick="timer2_Tick" ></asp:Timer>
+                      <asp:Timer ID="timer3" runat="server" Interval="1800" OnTick="timer3_Tick" ></asp:Timer>
+                      <asp:Timer ID="timer4" runat="server" Interval="2000" OnTick="timer4_Tick" ></asp:Timer>
+
         <!-- aqui é o timer, de 60 em 60 segundos ele ira atualizar a tabela -->
         </ContentTemplate>
                     </asp:UpdatePanel>
-              <label style="position:fixed; top:50%; left:18%;" >  Graus </label>
+              <label style="position:fixed; top:50%; left:18%;" >  Temperatura </label>
                  <div id="grafico" style="height:80%; width:98.6%"> 
                      
                     <br />
                  </div> 
-                <center>  <label> Segundos</label> </center>
+                <center>  <label> Tempo</label> </center>
                 <div style="margin-left:13.5%"></div>
             </div>
         </div>
@@ -217,6 +221,7 @@
         <footer>
             <p>Site feito por: Alice Coelho | Henrique Guimarães | Jean Sales | Lucas Nascimento | Mateus Soares</p>
             <p>Contato: 5Q@gmail.com | (11)11111-1111 | (11)1111-1111</p>
+            <a href="https://5q.freshdesk.com"> suporte</a>
         </footer>
 
         <!------------------- Scripts------------------------------------->

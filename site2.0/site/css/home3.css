@@ -43,13 +43,7 @@ body form{
 }
 
 /* Imagem de fundo que fica abaixo do cabeçalho */
-.backImg{
-    height: 270px;
-    width: 100%;
-    background-image: url(../img/marginalpinheiros.jpg);
-    background-position: center;
-    background-size: cover;
-}
+
 
 /* Corpo central da página, onde se encontra os dois botões principais */
 #main{
@@ -203,3 +197,32 @@ footer p{
     text-decoration: none;
     cursor: pointer;
 }
+
+#divao {/*div*/
+background-color:transparent;
+width:20%;
+height:15%;
+position:absolute;
+top:25%;
+left:20%;
+margin-left: 15%;
+padding: 1%;
+
+}
+#metro{/*div*/
+background-color:transparent;
+width:20%;
+height:20%;
+position:absolute;
+top:44.5%;
+left:15%;
+margin-left: 20%;
+padding: 1%;
+margin-top:1%;
+}
+
+hr{
+    padding: 2%;
+}
+
+

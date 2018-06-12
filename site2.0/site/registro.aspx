@@ -7,44 +7,66 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link rel="stylesheet" href="css/5qRe.css"/>
+     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/modal.js"></script>
+
+
+
+
+
+
+
+
+
+
     <link rel="icon" href="img/logo-2.png"/><!--icone da pagina-->
 </head>
 <body style="background-image:url(fundoregistro.jpg)">
     <form id="form1" runat="server">
         <div>
-            <img src="img/logo-2.png"  style="margin-left: 2%; margin-top: 2%;height:23%; width:20%;"/>
-            <div class="div" style=" display: flex; flex-direction:column">
-                <!---- logo da tela-->
-                <div class="div1">
-<%--                <div id="aviso">
-                        <asp:Label Text="preencha todos os espaços" ID="Label2" runat="server" 
-                        Style="margin-left:20%" ForeColor="Red" Visible="false" ></asp:Label>
-                   
-                        <asp:Label Text="seu id nao contem apenas numeros." ID="btnidlabel" runat="server" 
-                        Style="margin-left:20%" ForeColor="Red" Visible="false"></asp:Label>
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
 
-                        <asp:Label Text="Suas senhas nao batem." ID="btnlabel" runat="server"
-                        Style="margin-left:20%"   ForeColor="Red" Visible="false"></asp:Label> 
-                    </div>--%>
+        google.charts.load('current', { packages: ['corechart', 'line'] });
+        google.charts.setOnLoadCallback(desenharGrafico);
 
-                    <!-- campos de cadastro -->
-                    <asp:TextBox placeholder="Digite o nome completo" ID="txtNome" runat="server" /> 
-                    
-                    <asp:TextBox runat="server" ID="txtLogin" placeholder="Digite o login"/>
+        var total = 0, grafico = null, data = null;
+        var options = {
+                'backgroundColor': 'transparent'
+        };
 
-                    <asp:TextBox placeholder="Digite a senha" runat="server" ID="txtSenha" />
-               
-                    <asp:TextBox placeholder="Confirme a senha" runat="server" ID="txtConfirmarSenha" />
-                 
-                    <asp:DropDownList ID="dropDownList" runat="server" AppendDataBoundItems="true"
-                        OnSelectedIndexChanged="dropDownList_SelectedIndexChanged"/>
-                    <!-- Botão para cadastrar -->
-                    <asp:Button Text="Confirmar" runat="server" ID="btnConfirmar" OnClick="btnConfirmar_Click" />
-                    <!--Mensagem de erro -->
-                    <asp:Label  Text="" runat="server" ID="lblErro" />
-                    
-                </div>
-            </div>            
+        function desenharGrafico() {
+            if (data == null) {
+                data = new google.visualization.DataTable();
+                data.addColumn('number', 'Tempo');
+                data.addColumn('number', 'ºC');
+
+                grafico = new google.visualization.LineChart(document.getElementById('grafico'));
+            }
+
+            grafico.draw(data,options, { title: "Temperaturas em Tempo Real" });
+
+            setTimeout(function () {
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    url: 'home.aspx/TemperaturaAtual',
+                    data: '{}',
+                    success: function (response) {
+                        data.addRow([total, response.d]);
+                        total++;
+                        desenharGrafico();
+                    },
+                    error: function () {
+                    }
+                });
+            }, 1000);
+        }
+        
+    </script>
+            <div id="grafico"></div>
         </div>
     </form>
 </body>

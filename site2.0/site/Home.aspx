@@ -217,6 +217,7 @@
         <footer>
             <p>Site feito por: Alice Coelho | Henrique Guimarães | Jean Sales | Lucas Nascimento | Mateus Soares</p>
             <p>Contato: 5Q@gmail.com | (11)11111-1111 | (11)1111-1111</p>
+              <a href="https://5q.freshdesk.com">suporte</a>
         </footer>
 
         <!------------------- Scripts------------------------------------->

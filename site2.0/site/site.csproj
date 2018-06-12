@@ -102,6 +102,32 @@
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Home2.aspx" />
+    <Content Include="img\berrine.jpg" />
+    <Content Include="img\dentro.jpg" />
+    <Content Include="img\dentro2.png" />
+    <Content Include="img\fundoLogin.jpg" />
+    <Content Include="img\fundoregistro.jpg" />
+    <Content Include="img\geo-berrini.jpg" />
+    <Content Include="img\icone12.png" />
+    <Content Include="img\logo-2.png" />
+    <Content Include="img\logo_bandtec_ds_azul.png" />
+    <Content Include="img\loguinho.png" />
+    <Content Include="img\marginalpinheiros.jpg" />
+    <Content Include="img\masp.jpg" />
+    <Content Include="img\masp2.jpg" />
+    <Content Include="img\metro.jpg" />
+    <Content Include="img\pinheiros-estatistica.png" />
+    <Content Include="img\pinheiros-relatorio.png" />
+    <Content Include="img\pinheiros-temperatura.png" />
+    <Content Include="img\pinheiros.jpg" />
+    <Content Include="img\ponteestaida1.jpg" />
+    <Content Include="img\sao_paulo-ponte_estaiada.jpg" />
+    <Content Include="img\SPcidade.jpg" />
+    <Content Include="img\torrizinha.jpg" />
+    <Content Include="img\tunel.jpeg" />
+    <Content Include="img\tunel2.jpg" />
+    <Content Include="img\via4.jpg" />
+    <Content Include="img\viaquatro22.jpg" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-3.3.1.min.js" />
@@ -112,6 +138,9 @@
     <Content Include="tabela.aspx" />
     <Content Include="tabelasevagoes.aspx" />
     <Content Include="Web.config" />
+    <Content Include="webfonts\fa-brands-400.svg" />
+    <Content Include="webfonts\fa-regular-400.svg" />
+    <Content Include="webfonts\fa-solid-900.svg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -179,11 +208,22 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="webfonts\fa-brands-400.eot" />
+    <Content Include="webfonts\fa-brands-400.ttf" />
+    <Content Include="webfonts\fa-brands-400.woff" />
+    <Content Include="webfonts\fa-brands-400.woff2" />
+    <Content Include="webfonts\fa-regular-400.eot" />
+    <Content Include="webfonts\fa-regular-400.ttf" />
+    <Content Include="webfonts\fa-regular-400.woff" />
+    <Content Include="webfonts\fa-regular-400.woff2" />
+    <Content Include="webfonts\fa-solid-900.eot" />
+    <Content Include="webfonts\fa-solid-900.ttf" />
+    <Content Include="webfonts\fa-solid-900.woff" />
+    <Content Include="webfonts\fa-solid-900.woff2" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="img\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

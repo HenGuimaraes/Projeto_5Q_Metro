@@ -214,10 +214,6 @@ namespace site
                 }
             }
         }
-
-
-
-
         public static double Media()
         {
             int medea = 0;
@@ -356,11 +352,12 @@ namespace site
                     }
 
                 }
-
+                
             }
 
 
         }
+        
         
         protected void timer_Tick(object sender, EventArgs e)
         {
@@ -370,6 +367,7 @@ namespace site
             label3.Text = maximo().ToString() + "Cº" ;
             label4.Text = minimo().ToString() + "Cº" ;
             // aqui é onde ele vai envocar os metodos e retornar os valores que eu quero
+            conn.Close();
         }
         protected void btnSair_Click(object sender, EventArgs e)
         {

@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Web.Services;
 
 namespace site
 {
@@ -22,94 +23,43 @@ namespace site
          * ou seja, valor com mesmo nome das colunas.
          */
         protected void Page_Load(object sender, EventArgs e)
-
         {
-            //Escondendo a label do erro, vai aparecer só quando tiver ERRO
-            lblErro.Visible = false;
-
-                //Preenchendo o dropDownList com os cargos do banco de dados.
-                using (SqlConnection conString = new SqlConnection(@"Server = tcp:tab132.database.windows.net,1433;
-                Initial Catalog = esporte; Persist Security Info = False; User ID = mateus383@tab132; Password = 123456sS;
-                MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;  "))
-                {
-                    conString.Open();
-
-                    using (SqlCommand codigoSql = new SqlCommand("SELECT cod_cargo, nome_cargo FROM Cargo;", conString))
-                    {
-                        //dropDownList.Items.Clear();
-                        dropDownList.Items.Insert(0, "Selecione o cargo");//Inserindo um novo item, nome autoexplicativo.
-
-                        using (SqlDataReader dr = codigoSql.ExecuteReader())
-                        {
-                            //while (dr.Read()) {
-                            //    ListItem item = new ListItem();
-                            //    item.Value = dr.GetInt32(0).ToString();
-                            //    item.Text = dr.GetString(1);
-                            //    dropDownList.Items.Add(item);
-                            //}
-                            dropDownList.DataSource = dr;//Informa onde esta o bloco de dados para preencher o dropDown
-                            dropDownList.DataValueField = "cod_cargo";
-                            dropDownList.DataTextField = "nome_cargo";
-                            dropDownList.DataBind();
-
-                            while(dropDownList.Items.IsReadOnly)
-                            {
-                                lblErro.Text = dropDownList.Items.FindByValue("1").ToString();
-                                lblErro.Visible = true;
-                            }
-                            //dropDownList.SelectedIndex = 0;//Deixando ele já selecionado
-                        }
-                    }
-                }
-        }
+            
        
-        protected void btnConfirmar_Click(object sender, EventArgs e)
+
+        }
+
+
+
+        [WebMethod]
+        public static double TemperaturaAtual()
         {
-            //if (string.IsNullOrWhiteSpace(txtNome.Text) || string.IsNullOrWhiteSpace(txtSenha.Text)
-            //    || string.IsNullOrWhiteSpace(txtConfirmarSenha.Text))
-            //{
-            //    lblErro.Visible = true;
-            //    return;
-            //}// obriga o usuario a preencher todos os espaços
 
-            if (txtNome.Text != "" && txtLogin.Text != "" && txtSenha.Text != "" && txtConfirmarSenha.Text != ""
-             ) {
-                if (txtSenha.Text == txtConfirmarSenha.Text)
+            SqlConnection conn = Default.conecao();
+            {
+                conn.Open();
+
+                using (SqlCommand cmd = new SqlCommand("SELECT temperatura FROM Temperatura WHERE cod_temperatura = (SELECT MAX(cod_Temperatura) FROM temperatura)", conn))
                 {
-                    using (SqlConnection conn = new SqlConnection(@"Server = tcp:tab132.database.windows.net,1433;
-Initial Catalog = esporte; Persist Security Info = False; User ID = mateus383@tab132; Password = 123456sS;
-                    MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;"))
-                    {   
-                        conn.Open();
 
-                        using (SqlCommand cmd = new SqlCommand(@"INSERT INTO Usuario 
-                                                           VALUES ( @login,@senha, @nome, @cod_cargo)", conn))
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.Read() == true)
                         {
-                            cmd.Parameters.AddWithValue("@nome", txtNome.Text);
-                            cmd.Parameters.AddWithValue("@login", txtLogin.Text);
-                            cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
-                            cmd.Parameters.AddWithValue("@cod_cargo", dropDownList.SelectedValue);
-                            cmd.ExecuteNonQuery();
+                            return double.Parse(dr["temperatura"].ToString());
+                        }
+                        else
+                        {
+                            return 0;
                         }
                     }
+
                 }
-                else
-                {
-                    lblErro.Text = "As senhas não estão iguais";
-                    lblErro.Visible = true;
-                }
+
             }
-            else
-            {
-                lblErro.Text = "Preencha todos os campos!!";
-                lblErro.Visible = true;
-                
-            }
+
+
         }
 
-        protected void dropDownList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            index = dropDownList.SelectedIndex - 1;
-        }
     }
 }

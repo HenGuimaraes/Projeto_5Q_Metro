@@ -13,13 +13,16 @@ namespace site
     {
         string b;
         public static SqlConnection conecao()
+
         {
+            
         SqlConnection conn = new SqlConnection(@"Server=tcp:tab132.database.windows.net,1433;
         Initial Catalog=esporte;Persist Security Info=False;User ID=mateus383;Password=123456sS;MultipleActiveResultSets=False;
          Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
           return conn;
             
         }
+
         // coloquei em um metodo a conecao string
         
         protected void Page_Load(object sender, EventArgs e)

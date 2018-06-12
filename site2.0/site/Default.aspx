@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>login</title>
-    <link rel="stylesheet" type="text/css" href="css/login2.css"/>
+    <link rel="stylesheet" type="text/css" href="css/login3.css"/>
     <link rel="icon" href="img/logo-2.png"/><!--icone da pagina-->
 </head>
 <body>
@@ -15,7 +15,7 @@
         <div id="main">            
             
 			<asp:TextBox runat="server" id="txtLogin" placeholder="Digite seu login"/>
-			<asp:TextBox runat="server" id="txtSenha" placeholder="Digite sua senha"/>
+			<asp:TextBox runat="server" id="txtSenha" placeholder="Digite sua senha" type="password"/>
 			<asp:Button Text="Entrar" runat="server" id="btnEntrar" OnClick="btnEntrar_Click"/>
         </div>
 		<asp:Label Text="" runat="server" ID="lblInvalido" style="color:red;

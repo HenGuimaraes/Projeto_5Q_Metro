@@ -85,6 +85,33 @@ namespace site {
         protected global::System.Web.UI.Timer timer1;
         
         /// <summary>
+        /// Controle timer2.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.Timer timer2;
+        
+        /// <summary>
+        /// Controle timer3.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.Timer timer3;
+        
+        /// <summary>
+        /// Controle timer4.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.Timer timer4;
+        
+        /// <summary>
         /// Controle hiddenmodal.
         /// </summary>
         /// <remarks>

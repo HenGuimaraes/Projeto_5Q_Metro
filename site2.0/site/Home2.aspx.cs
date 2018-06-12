@@ -366,32 +366,40 @@ namespace site
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
 
-                        while (dr.Read() == true)
-                        {
+                       if (dr.Read() == true)
+                       {
                             a = dr.GetInt32(0);
                             medea = a - 60;
                             //aqui eu fiz um algoritimo pra ele pegar a ultima temperatura dada,
                             // e a ultima a 60 segundos atras
-                        }
+                       }
 
                     }
 
-
+                   
                 }
+                
+                    
                 using (SqlCommand cmd = new SqlCommand($"SELECT max(temperatura) FROM Temperatura WHERE cod_temperatura between {medea} and {a}", conn))
                 {
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
                         if (dr.Read() == true)
                         {
-                            return dr.GetDouble(0);
+                            double po = dr.GetDouble(0);
+                            conn.Close();
+                            return po;
                             //continuação do que ue falei acima, ele vai verificar as temperaturas entre a ultima
                             //temperatura dada e a ultima 60segundos atras, e vai pegar o maximo entre elas
                         }
                         else { return 0; }
+                         
                     }
+
                 }
+                
             }
+
         }
 
         public static double minimo()
@@ -408,34 +416,43 @@ namespace site
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
 
-                        while (dr.Read() == true)
+                        if (dr.Read() == true)
                         {
                             a = dr.GetInt32(0);
                             medea = a - 60;
                             //aqui eu fiz um algoritimo pra ele pegar a ultima temperatura dada,
                             // e a ultima a 60 segundos atras
                         }
+                        else { return 0; }
+                        conn.Close();
 
                     }
 
 
+
                 }
+                conn.Open();
+             
                 using (SqlCommand cmd = new SqlCommand($"SELECT min(temperatura) FROM Temperatura WHERE cod_temperatura between {medea} and {a}", conn))
                 {
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
                         if (dr.Read() == true)
                         {
-                            return dr.GetDouble(0);
+                            double po = dr.GetDouble(0);
+                            conn.Close();
+                            return po;
+                            
                             //continuação do que ue falei acima, ele vai verificar as temperaturas entre a ultima
                             //temperatura dada e a ultima 60segundos atras, e vai pegar o minimo entre elas
                         }
                         else { return 0; }
+                       
                     }
                 }
             }
         }
-
+        
 
 
 
@@ -453,25 +470,33 @@ namespace site
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
 
-                        while (dr.Read() == true)
+                       if (dr.Read() == true)
                         {
+                            
                             a = dr.GetInt32(0);
                             medea = a - 60;
+                            
                             //aqui eu fiz um algoritimo pra ele pegar a ultima temperatura dada,
                             // e a ultima a 60 segundos atras
-                        }
-
+                        } else { return 0; }
+                        
+                   
                     }
 
 
                 }
+
                 using (SqlCommand cmd = new SqlCommand($"SELECT round(avg(temperatura),2) FROM Temperatura WHERE cod_temperatura between {medea} and {a}", conn))
                 {
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
                         if (dr.Read() == true)
                         {
-                            return dr.GetDouble(0);
+
+                            double po = dr.GetDouble(0);
+                            conn.Close();
+                            return po;
+
                             //aqui o comando vai dar diretamente a media entre a ultima temperatura dada e a ultima a 60
                             //segundos atras, e logo em seguida ele só ira deixar 2 casas pós virgula
                         }
@@ -479,8 +504,8 @@ namespace site
                     }
 
 
-
-
+                    
+                
                 }
             }
         }
@@ -499,14 +524,16 @@ namespace site
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
 
-                        while (dr.Read() == true)
+                       if (dr.Read() == true)
                         {
                             xa = dr.GetInt32(0) - 30;
+
                             //como só iremos pegar a temperatura de 1 em 1 minuto, ou seja, a cada 60 segundos
                             // eu coloquei pra pegar a mediana direto.
 
 
                         }
+                        else { return 0; }
 
                     }
 
@@ -520,6 +547,7 @@ namespace site
                         if (dr.Read() == true)
                         {
                             medea = dr.GetDouble(0);
+                           
                             // aqui ele vai pegar a temperatura mediana 
                         }
                         else { cmd.ExecuteNonQuery(); return 1001; }
@@ -548,6 +576,7 @@ namespace site
 
                     }
                 }
+                conn.Close();
                 return (medea + b) / 2;
                 // esse é o calculo da mediana par
 
@@ -589,9 +618,7 @@ namespace site
         protected void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = Media().ToString() + "Cº";
-            label2.Text = Mediana().ToString() + "Cº";
-            label3.Text = maximo().ToString() + "Cº";
-            label4.Text = minimo().ToString() + "Cº";
+           
         }
 
 
@@ -602,6 +629,23 @@ namespace site
             Response.Cookies.Set(cookie);
             Response.Redirect("http://localhost:2616/default.aspx"); 
             
+        }
+
+        protected void timer2_Tick(object sender, EventArgs e)
+        {
+            label2.Text = Mediana().ToString() + "Cº";
+          
+           
+        }
+
+        protected void timer4_Tick(object sender, EventArgs e)
+        {
+            label3.Text = maximo().ToString() + "Cº";
+        }
+
+        protected void timer3_Tick(object sender, EventArgs e)
+        {
+            label4.Text = minimo().ToString() + "Cº";
         }
     }
 }
