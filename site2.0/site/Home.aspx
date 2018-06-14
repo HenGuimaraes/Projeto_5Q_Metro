@@ -106,34 +106,34 @@
 
 	        <div class="modal-content" id="modal-tabela">
                 <span class="close2 ">&times;</span>
-                 <div id="divMae" >
-               <div id="divao">
-                   
-                   <asp:TextBox placeholder="Nome do trem aqui" ID="Trem" runat="server"> </asp:TextBox>
-                    <asp:TextBox placeholder="Amarela" ID="linha" runat="server" TextMode="SingleLine" ViewStateMode="Inherit" ReadOnly="True"></asp:TextBox>
-                    <asp:Button Text="Registrar trem" ID="registrotrem" runat="server" Enabled="false" />
-                   <br />
-                   <hr/>
-                   </div>
-           
-            
-
-               <div  id="metro">
-                 
-                   <asp:TextBox placeholder="nome dos vagoes" ID="nomevagao" runat="server" MaxLength="5" ></asp:TextBox>
-                   <asp:TextBox placeholder="quantidade de vagoes" ID="quantidade" runat="server"></asp:TextBox>
-                  
-                   <asp:DropDownList placeholder="trens"  ID="trens" runat="server">
-                      <asp:ListItem text="trens" value="0"></asp:ListItem>
-                   </asp:DropDownList>  
-                   <!-----aqui é o dropdown, ele ira gerar automaticamente apartir dos dados registrados no banco de dados,
-                       ele nao ira aparecer aqui --->
-
-                    <asp:Button Text="registrar vagoes" ID="Button1" runat="server" Enabled="false" />
-                   <asp:Label ID="lebel" runat="server"></asp:Label>
-                       
-               </div>
-        </div>
+                 <center>
+                <div style="width:60%; height:60%; background-color:gray;">
+                    
+                       <table>
+                           <tr> 
+                                <th> <asp:button id="buton1" runat="server" Text="vagao1" style="background-color:transparent; border-color:transparent;" /></th>
+                                <th> Vagao2</th>
+                                <th> Vagao3</th>
+                                <th> Vagao4</th>
+                                <th> Vagao5</th>
+                                <th> Vagao6</th>
+                                <th> Vagao7</th>
+                                <th> Vagao8</th>
+                           </tr>
+                           <tr>
+                               <td><asp:Label ID="label0" runat="server"></asp:Label></td>
+                               <td><asp:label ID="label6" runat="server"></asp:label></td>
+                               <td><asp:label ID="label7" runat="server"></asp:label></td>
+                               <td><asp:label ID="label8" runat="server"></asp:label></td>
+                               <td><asp:label ID="label5" runat="server"></asp:label></td>
+                               <td><asp:label ID="label9" runat="server"></asp:label></td>
+                               <td><asp:label ID="label10" runat="server"></asp:label></td>
+                               
+                           </tr>
+                           <!-- tabela das temperaturas -->
+                           
+                          </table>
+                        </center>
                 
             </div>
         </div>
@@ -166,6 +166,34 @@
         <div id="myModal4">
 	        <div class="modal-content" id="modal-cadastro-trens">
                 <span class="close4 ">&times;</span>
+                <div id="divMae" >
+               <div id="divao">
+                   
+                   <asp:TextBox placeholder="Nome do trem aqui" ID="Trem" runat="server"> </asp:TextBox>
+                    <asp:TextBox placeholder="Amarela" ID="linha" runat="server" TextMode="SingleLine" ViewStateMode="Inherit" ReadOnly="True"></asp:TextBox>
+                    <asp:Button Text="Registrar trem" ID="registrotrem" runat="server" Enabled="false" />
+                   <br />
+                   <hr/>
+                   </div>
+           
+            
+
+               <div  id="metro">
+                 
+                   <asp:TextBox placeholder="nome dos vagoes" ID="nomevagao" runat="server" MaxLength="5" ></asp:TextBox>
+                   <asp:TextBox placeholder="quantidade de vagoes" ID="quantidade" runat="server"></asp:TextBox>
+                  
+                   <asp:DropDownList placeholder="trens"  ID="trens" runat="server">
+                      <asp:ListItem text="trens" value="0"></asp:ListItem>
+                   </asp:DropDownList>  
+                   <!-----aqui é o dropdown, ele ira gerar automaticamente apartir dos dados registrados no banco de dados,
+                       ele nao ira aparecer aqui --->
+
+                    <asp:Button Text="registrar vagoes" ID="Button1" runat="server" Enabled="false" />
+                   <asp:Label ID="lebel" runat="server"></asp:Label>
+                       
+               </div>
+        </div>
             </div>
         </div>
 

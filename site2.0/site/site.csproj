@@ -87,15 +87,15 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\cadUsuario.css" />
+    <Content Include="css\fontawesome-all.min.css" />
     <Content Include="css\home.css" />
     <Content Include="css\home1.css" />
     <Content Include="css\home3.css" />
     <Content Include="css\login.css" />
-    <Content Include="css\login2.css" />
+    <Content Include="css\login3.css" />
     <Content Include="css\Novo Documento de Texto.txt" />
     <Content Include="css\pagina.css" />
     <Content Include="css\pagina1.css" />
-    <Content Include="css\registrovagao.css" />
     <Content Include="css\registrovagao2.css" />
     <Content Include="css\tabela.css" />
     <Content Include="Default.aspx" />
@@ -112,7 +112,6 @@
     <Content Include="img\logo-2.png" />
     <Content Include="img\logo_bandtec_ds_azul.png" />
     <Content Include="img\loguinho.png" />
-    <Content Include="img\marginalpinheiros.jpg" />
     <Content Include="img\masp.jpg" />
     <Content Include="img\masp2.jpg" />
     <Content Include="img\metro.jpg" />
@@ -202,6 +201,7 @@
     <Content Include="css\bootstrap.css.map" />
     <Content Include="css\bootstrap.min.css.map" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\new5Q - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

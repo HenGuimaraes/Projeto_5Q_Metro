@@ -6,8 +6,8 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>login</title>
-    <link rel="stylesheet" type="text/css" href="css/login3.css"/>
-    <link rel="icon" href="img/logo-2.png"/><!--icone da pagina-->
+    <link href="css/login3.css" type="text/css" rel="stylesheet"/>
+    <link href="img/logo-2.png" rel="icon"/><!--icone da pagina-->
 </head>
 <body>
     <form id="form1" runat="server">

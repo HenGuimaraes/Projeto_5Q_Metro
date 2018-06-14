@@ -87,10 +87,10 @@
                            
                           </table>
                         </center>
-            <asp:Timer ID="timer1" runat="server" Interval="1200" OnTick="timer1_Tick" ></asp:Timer>
-                       <asp:Timer ID="timer2" runat="server" Interval="1000" OnTick="timer2_Tick" ></asp:Timer>
-                      <asp:Timer ID="timer3" runat="server" Interval="1800" OnTick="timer3_Tick" ></asp:Timer>
-                      <asp:Timer ID="timer4" runat="server" Interval="2000" OnTick="timer4_Tick" ></asp:Timer>
+            <asp:Timer ID="timer1" runat="server" Interval="60000" OnTick="timer1_Tick" ></asp:Timer>
+                       <asp:Timer ID="timer2" runat="server" Interval="60000" OnTick="timer2_Tick" ></asp:Timer>
+                      <asp:Timer ID="timer3" runat="server" Interval="60000" OnTick="timer3_Tick" ></asp:Timer>
+                      <asp:Timer ID="timer4" runat="server" Interval="60000" OnTick="timer4_Tick" ></asp:Timer>
 
         <!-- aqui é o timer, de 60 em 60 segundos ele ira atualizar a tabela -->
         </ContentTemplate>
@@ -110,35 +110,37 @@
 
 	        <div class="modal-content" id="modal-tabela">
                 <span class="close2 ">&times;</span>
-                 <div id="divMae" >
-               <div id="divao">
-                   
-                   <asp:TextBox placeholder="Nome do trem aqui" ID="Trem" runat="server"> </asp:TextBox>
-                    <asp:TextBox placeholder="Amarela" ID="linha" runat="server" TextMode="SingleLine" ViewStateMode="Inherit" ReadOnly="True"></asp:TextBox>
-                    <asp:Button Text="Registrar trem" ID="registrotrem" runat="server" OnClick="registrotrem_Click" />
-                   <br />
-                   <hr/>
-                   </div>
-           
-            
+               <center>
+                <div style="width:60%; height:60%; background-color:gray;">
+                    
+                       <table>
+                           <tr> 
+                                <th> <asp:button id="buton1" runat="server" Text="vagao1" style="background-color:transparent; border-color:transparent;" /></th>
+                                <th> Vagao2</th>
+                                <th> Vagao3</th>
+                                <th> Vagao4</th>
+                                <th> Vagao5</th>
+                                <th> Vagao6</th>
+                                <th> Vagao7</th>
+                                <th> Vagao8</th>
+                           </tr>
+                           <tr>
+                               <td><asp:Label ID="label0" runat="server"></asp:Label></td>
+                               <td><asp:label ID="label6" runat="server"></asp:label></td>
+                               <td><asp:label ID="label7" runat="server"></asp:label></td>
+                               <td><asp:label ID="label8" runat="server"></asp:label></td>
+                               <td><asp:label ID="label5" runat="server"></asp:label></td>
+                               <td><asp:label ID="label9" runat="server"></asp:label></td>
+                               <td><asp:label ID="label10" runat="server"></asp:label></td>
+                               
+                           </tr>
+                           <!-- tabela das temperaturas -->
+                           
+                          </table>
+                        </center>
 
-               <div  id="metro">
-                 
-                   <asp:TextBox placeholder="nome dos vagoes" ID="nomevagao" runat="server" MaxLength="5" ></asp:TextBox>
-                   <asp:TextBox placeholder="quantidade de vagoes" ID="quantidade" runat="server"></asp:TextBox>
-                  
-                   <asp:DropDownList placeholder="trens"  ID="trens" runat="server">
-                      <asp:ListItem text="trens" value="0"></asp:ListItem>
-                   </asp:DropDownList>  
-                   <!-----aqui é o dropdown, ele ira gerar automaticamente apartir dos dados registrados no banco de dados,
-                       ele nao ira aparecer aqui --->
-
-                    <asp:Button Text="registrar vagoes" ID="Button1" runat="server" OnClick="registrovagao_Click" />
-                   <asp:Label ID="lebel" runat="server"></asp:Label>
-                       
-               </div>
-        </div>
-                
+                </div>
+               
             </div>
         </div>
         <!-- modal da tela de cadastro -->
@@ -170,6 +172,35 @@
         <div id="myModal4">
 	        <div class="modal-content" id="modal-cadastro-trens">
                 <span class="close4 ">&times;</span>
+                  <div id="divMae" >
+               <div id="divao">
+                   
+                   <asp:TextBox placeholder="Nome do trem aqui" ID="Trem" runat="server"> </asp:TextBox>
+                    <asp:TextBox placeholder="Amarela" ID="linha" runat="server" TextMode="SingleLine" ViewStateMode="Inherit" ReadOnly="True"></asp:TextBox>
+                    <asp:Button Text="Registrar trem" ID="registrotrem" runat="server" OnClick="registrotrem_Click" />
+                   <br />
+                   <hr/>
+                   </div>
+           
+            
+
+               <div  id="metro">
+                 
+                   <asp:TextBox placeholder="nome dos vagoes" ID="nomevagao" runat="server" MaxLength="5" ></asp:TextBox>
+                   <asp:TextBox placeholder="quantidade de vagoes" ID="quantidade" runat="server"></asp:TextBox>
+                  
+                   <asp:DropDownList placeholder="trens"  ID="trens" runat="server">
+                      <asp:ListItem text="trens" value="0"></asp:ListItem>
+                   </asp:DropDownList>  
+                   <!-----aqui é o dropdown, ele ira gerar automaticamente apartir dos dados registrados no banco de dados,
+                       ele nao ira aparecer aqui --->
+
+                    <asp:Button Text="registrar vagoes" ID="Button1" runat="server" OnClick="registrovagao_Click" />
+                   <asp:Label ID="lebel" runat="server"></asp:Label>
+                       
+               </div>
+        </div>
+                
             </div>
         </div>
 
@@ -233,7 +264,7 @@
              
           
             <%if (hiddenmodal.Text =="o"){%>
-                modal2.style.display = "block"; 
+                modal4.style.display = "block"; 
          <% } %>
              <%if (hiddenmodal.Text =="z"){%>
                 modal3.style.display = "block"; 

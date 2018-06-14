@@ -40,7 +40,7 @@ namespace site
             cookie = Request.Cookies["cookie"];
             if (cookie == null)
             {
-                Response.Redirect("localhost:2616/default.aspx");
+                Response.Redirect("http://new5q.azurewebsites.net/");
                 return;
             }
              nome = cookie.Values["nome"];
@@ -49,13 +49,13 @@ namespace site
             if (nome == null || cargo == "1")
             {
                
-                Response.Redirect("localhost:2616/default.aspx");
+                Response.Redirect("http://new5q.azurewebsites.net/");
             }
             lab1.Text = nome ;
            //aqui ele vai validar se o usuario esta logado, se nao estiver ele nao conseguira entrar no site
            //se ele tambem nao for administrador ele nao conseguira
            
-            
+            label0.Text = Media().ToString() + "Cº";
             label1.Text = Media().ToString() + "Cº";
             label2.Text = Mediana().ToString() + "Cº";
             label3.Text = maximo().ToString() + "Cº";
@@ -127,7 +127,7 @@ namespace site
                         dropDownList.DataBind();
                     }
                 }
-            }
+            }conn.Close();
         }
          protected void registrotrem_Click(object sender, EventArgs e)
          {
@@ -208,6 +208,11 @@ namespace site
                  // O return encerra a execução por aqui
                  return;
              }
+             if (quantidadeDeVagao > 8)
+            {
+                lebel.Text = "muitos vagoes";
+                return;
+            }
             if (trens.SelectedValue == "0")
             {
                 lebel.Text = "preencha um trem";
@@ -216,10 +221,10 @@ namespace site
             int codtrem;
             string opcoesDeTrem = trens.SelectedValue; //seleciona o ID do dropdown
             int.TryParse(opcoesDeTrem, out codtrem); // transforma o ID do drowpdown em int
-
-            while (contador <= quantidadeDeVagao+1)
+            contador = 0;
+            while (contador < quantidadeDeVagao)
              {
-                contador++;
+                contador = contador + 1 ;
                
                
               
@@ -254,7 +259,7 @@ namespace site
                              {
                                  conta = reader.GetInt32(0);
                                  // cmd.ExecuteNonQuery();
-       
+                                
                              }
                          }
        
@@ -271,7 +276,7 @@ namespace site
                          cmd.Parameters.AddWithValue("@cod_trem", codtrem);
                          //gera o nome do vagao, e se for registrado ira começar o vetor
        
-                         quantidadeDeVagao = quantidadeDeVagao - 1;
+                        
        
                          cmd.ExecuteNonQuery();
        
@@ -509,7 +514,7 @@ namespace site
                 }
             }
         }
-
+        
         public static double Mediana()
         {
 
@@ -618,7 +623,8 @@ namespace site
         protected void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = Media().ToString() + "Cº";
-           
+            label0.Text = Media().ToString() + "Cº";
+
         }
 
 
@@ -627,7 +633,7 @@ namespace site
         {
             cookie.Expires = DateTime.Now.AddYears(-1); // expira o cookie fazendo o usuario perder o save na pagina
             Response.Cookies.Set(cookie);
-            Response.Redirect("http://localhost:2616/default.aspx"); 
+            Response.Redirect("http://new5q.azurewebsites.net/"); 
             
         }
 

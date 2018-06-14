@@ -11,6 +11,7 @@ namespace site
 {
     public partial class Default : System.Web.UI.Page
     {
+        HttpCookie cookie;
         string b;
         public static SqlConnection conecao()
 
@@ -18,7 +19,7 @@ namespace site
             
         SqlConnection conn = new SqlConnection(@"Server=tcp:tab132.database.windows.net,1433;
         Initial Catalog=esporte;Persist Security Info=False;User ID=mateus383;Password=123456sS;MultipleActiveResultSets=False;
-         Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+         Encrypt=True;TrustServerCertificate=False;Connection Timeout=3000;max pool size=100000");
           return conn;
             
         }
@@ -27,6 +28,20 @@ namespace site
         
         protected void Page_Load(object sender, EventArgs e)
         {
+           HttpCookie coke = Request.Cookies["cookie"];
+            if (coke != null)
+            {
+               string cargo = coke.Values["cargo"];
+               if (cargo == "2")
+               {
+                   Response.Redirect("http://new5q.azurewebsites.net/home2.aspx");
+               }
+              else
+              { Response.Redirect("http://new5q.azurewebsites.net/home.aspx"); }
+            }
+
+
+
 
             lblInvalido.Visible = false;
             txtLogin.Focus();
@@ -72,7 +87,7 @@ namespace site
 
                                 //Session["nome"] = dr.GetString(2);
                                
-                                HttpCookie cookie = new HttpCookie("cookie");
+                                cookie = new HttpCookie("cookie");
                                 cookie.Values.Set("nome", dr.GetString(2));
                                 cookie.Values.Set("cargo", dr.GetInt32(3).ToString());
                                 // aqui ele ira salvar esses dados no pc do usuario
@@ -84,11 +99,11 @@ namespace site
 
                                 if (codCargo == 1)//Se for funcionário, codCargo = 1, então vai pra página dele
                                 {
-                                    Response.Redirect("http://localhost:2616/Home.aspx");
+                                    Response.Redirect("http://new5q.azurewebsites.net/home.aspx");
                                 }
                                 else//Se for administrador, codCargo = 2, então vai para página dele
                                 {
-                                    Response.Redirect("http://localhost:2616/Home2.aspx");
+                                    Response.Redirect("http://new5q.azurewebsites.net/home2.aspx");
                                 }
                             }
                             else//Caso contrário, ele errou um dos dois e exibe a mensagem para ele corrigir
