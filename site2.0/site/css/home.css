@@ -1,10 +1,18 @@
 ﻿table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 90%;
+   
 	
 }
-
+#dropvagao {
+    float: left;
+    background-color: darkgray;
+    font-weight: bold;
+    border: solid;
+    -webkit-appearance:none;
+    
+    
+}
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
@@ -13,8 +21,13 @@ td, th {
 	
 }
 
+
+
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: whitesmoke;
+}
+tr:nth-child(odd) {
+    background-color: darkgray;
 }
 
 .backImg{

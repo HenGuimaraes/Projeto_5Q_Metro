@@ -121,13 +121,40 @@ namespace site {
         protected global::System.Web.UI.WebControls.Label hiddenmodal;
         
         /// <summary>
-        /// Controle buton1.
+        /// Controle hiddentemp.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button buton1;
+        protected global::System.Web.UI.WebControls.Label hiddentemp;
+        
+        /// <summary>
+        /// Controle dropvagao.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropvagao;
+        
+        /// <summary>
+        /// Controle UpdatePanel3.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel3;
+        
+        /// <summary>
+        /// Controle label10.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label10;
         
         /// <summary>
         /// Controle label0.
@@ -139,6 +166,15 @@ namespace site {
         protected global::System.Web.UI.WebControls.Label label0;
         
         /// <summary>
+        /// Controle label5.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label5;
+        
+        /// <summary>
         /// Controle label6.
         /// </summary>
         /// <remarks>
@@ -148,13 +184,13 @@ namespace site {
         protected global::System.Web.UI.WebControls.Label label6;
         
         /// <summary>
-        /// Controle label7.
+        /// Controle eita.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label label7;
+        protected global::System.Web.UI.WebControls.Label eita;
         
         /// <summary>
         /// Controle label8.
@@ -166,15 +202,6 @@ namespace site {
         protected global::System.Web.UI.WebControls.Label label8;
         
         /// <summary>
-        /// Controle label5.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label label5;
-        
-        /// <summary>
         /// Controle label9.
         /// </summary>
         /// <remarks>
@@ -184,13 +211,13 @@ namespace site {
         protected global::System.Web.UI.WebControls.Label label9;
         
         /// <summary>
-        /// Controle label10.
+        /// Controle label18.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label label10;
+        protected global::System.Web.UI.WebControls.Label label18;
         
         /// <summary>
         /// Controle txtNome.

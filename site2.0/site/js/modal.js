@@ -1,7 +1,6 @@
 //Modal do gráfico-->
     // pega o modal
-    var modal1 = document.getElementById('myModal1');
-
+var modal1 = document.getElementById('myModal1');
     // pega o botão que abre o modal
     var btn1 = document.getElementById('btnGrafico');
 
@@ -75,3 +74,26 @@
             modal4.style.display = "none";
         }
     }
+var modal1 = document.getElementById('myModal1');
+// pega o botão que abre o modal
+var btn5 = document.getElementById('modalgraficovagao');
+
+// botão de feichar o modalx
+var span5 = document.getElementsByClassName('close')[0];
+
+// quando clica no botão
+btn5.onclick = function () {
+    modal1.style.display = "block";
+};
+// quando clica no X
+span5.onclick = function () {
+    modal1.style.display = "none";
+};
+
+// quando clicar fora do modal feichar
+ modal5.onclick = function (event) {
+     if (event.target == modal1) {
+         modal1.style.display = "none";
+     }
+ };
+

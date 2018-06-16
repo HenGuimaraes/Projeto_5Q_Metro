@@ -7,24 +7,26 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Web.Services;
 
+
 namespace site
 {
     public partial class Home2 : System.Web.UI.Page
     {
-        int index;
+        //int index;
       
         int contador = 0;
      
         int conta = 0;
 
+        string[] nomes = new string[80];
         HttpCookie cookie;
 
         //contador necessario para nao zerar o vetor, deve ficar fora dos protegidos
         ListItem item;
         //SqlConnection conn = new SqlConnection(@"Server=tcp:tab132.database.windows.net,1433;Initial Catalog=esporte;Persist Security Info=False;User ID=mateus383;Password=123456sS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         SqlConnection conn = Default.conecao();
-        
-        
+
+        string statusvalidar;
         /*
          * DataBind() - vincula o DataSource com o dropDownList, ou seja, agora que ele tinha os valores
          * graças ao DataSource, eu uso o DataBind pra inserir eles no DropDownList, através de dois campos
@@ -52,28 +54,19 @@ namespace site
                 Response.Redirect("http://new5q.azurewebsites.net/");
             }
             lab1.Text = nome ;
-           //aqui ele vai validar se o usuario esta logado, se nao estiver ele nao conseguira entrar no site
-           //se ele tambem nao for administrador ele nao conseguira
-           
+            //aqui ele vai validar se o usuario esta logado, se nao estiver ele nao conseguira entrar no site
+            //se ele tambem nao for administrador ele nao conseguira
+            label6.Text = "Online";
             label0.Text = Media().ToString() + "Cº";
             label1.Text = Media().ToString() + "Cº";
             label2.Text = Mediana().ToString() + "Cº";
             label3.Text = maximo().ToString() + "Cº";
             label4.Text = minimo().ToString() + "Cº";
-
-
-            Session["teste"] = "a";
-               if (hiddenmodal.Text == "o")
-            {
-                Session["teste"] = "o";
-            }
-               if(hiddenmodal.Text== "z")
-            {
-                Session["teste"] = "z";
-            }
-               //isso aqui faz com que as modais se escondam, quando a pessoa apertar o botao de uma certa modal
-               // ela ira ficar solida no front, ou seja, ira dar um post back com ela block
+            label5.Text = Mediana().ToString() + "Cº";
           
+          
+
+       
             conn.Open();
          //=====================================================================================//
          using (SqlCommand cmd = new SqlCommand("SELECT cod_trem,nome_trem From Trem order by cod_trem", conn))
@@ -87,16 +80,47 @@ namespace site
                      string descricao = reader.GetString(1);
                      //pegando as informaços que foram lidas
                      item = new ListItem(descricao, valor1);  //descricao é oq o usuario ve
-                                                              //valor é o id do item, "value"
-                     if (IsPostBack == false)
-                     {
+
+                        //valor é o id do item, "value"
+                        
+                        
+                        if (IsPostBack == false)
+                        {
+                            dropvagao.Items.Add(item);
                          trens.Items.Add(item);
-                     }// aqui ele adiciona no dropdown 
+                        }
+                        
+                        
+                        
+                        
+                       // aqui ele adiciona no dropdown 
                       // aqui ele ira ler os codigos que estao no banco de dados e registrar no dropdown
                  }
              }
-         }
-         conn.Close();
+         } conn.Close();
+            
+            conn.Open();
+            using (SqlCommand cmd = new SqlCommand($"SELECT nome_vagao From vagao where cod_trem = {dropvagao.SelectedValue} ", conn))
+            {
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                     while(reader.Read() == true )  
+                    {
+
+                        nomes[contador] = reader.GetString(0);
+                        contador++;
+                    }
+                    
+                }
+            }
+           
+            conn.Close();
+            label10.Text = nomes[0];
+            
+            
+
+           
 
             //Esse IF faz com que o Load só rode na primeira vez que a página é carregada
             if (IsPostBack == true)
@@ -128,6 +152,10 @@ namespace site
                     }
                 }
             }conn.Close();
+        }
+        public string nome1(int numero)
+        {
+            return nomes[numero];
         }
          protected void registrotrem_Click(object sender, EventArgs e)
          {
@@ -291,7 +319,9 @@ namespace site
        
         protected void btnConfirmar_Click(object sender, EventArgs e)
         {
+
            
+
             Session["teste"] = "z";
             hiddenmodal.Text = Session["teste"].ToString();
             // esses sessions servem para deixar as modais solidas
@@ -361,6 +391,7 @@ namespace site
         {
             int medea = 0;
             int a = 0;
+            int b = 0;
             SqlConnection conn = Default.conecao();
             {
                 conn.Open();
@@ -369,20 +400,22 @@ namespace site
                 {
 
                     using (SqlDataReader dr = cmd.ExecuteReader())
-                    {
+                    {  
 
                        if (dr.Read() == true)
-                       {
+                       {   
                             a = dr.GetInt32(0);
                             medea = a - 60;
                             //aqui eu fiz um algoritimo pra ele pegar a ultima temperatura dada,
                             // e a ultima a 60 segundos atras
                        }
+                       
 
                     }
 
                    
                 }
+                
                 
                     
                 using (SqlCommand cmd = new SqlCommand($"SELECT max(temperatura) FROM Temperatura WHERE cod_temperatura between {medea} and {a}", conn))
@@ -521,14 +554,14 @@ namespace site
             double xa = 0, b = 0, medea = 0;
 
             SqlConnection conn = Default.conecao();
-            {
+            {   
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand("SELECT MAX (cod_temperatura) FROM Temperatura", conn))
                 {
 
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
-
+                         
                        if (dr.Read() == true)
                         {
                             xa = dr.GetInt32(0) - 30;
@@ -593,7 +626,7 @@ namespace site
         [WebMethod]
         public static double TemperaturaAtual()
         {
-
+            
             //SqlConnection conn = new SqlConnection(@"Server=tcp:tab132.database.windows.net,1433;Initial Catalog=esporte;Persist Security Info=False;User ID=mateus383;Password=123456sS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             SqlConnection conn = Default.conecao();
             using (conn)
@@ -619,12 +652,26 @@ namespace site
 
             }
         }
-
+        
         protected void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = Media().ToString() + "Cº";
             label0.Text = Media().ToString() + "Cº";
+            label5.Text = Mediana().ToString() + "Cº";
+           
+            statusvalidar = hiddentemp.Text;
 
+            if (TemperaturaAtual().ToString() == statusvalidar)
+            {
+                label6.Text = "Offline";
+                //label6.BackColor = System.Drawing.Color.Red ;
+            }
+            else
+            {
+                label6.Text = "Online";
+              //  label6.BackColor = System.Drawing.Color.Green;
+            }
+            hiddentemp.Text = TemperaturaAtual().ToString();
         }
 
 
@@ -640,8 +687,9 @@ namespace site
         protected void timer2_Tick(object sender, EventArgs e)
         {
             label2.Text = Mediana().ToString() + "Cº";
-          
-           
+            
+            
+
         }
 
         protected void timer4_Tick(object sender, EventArgs e)
@@ -652,6 +700,11 @@ namespace site
         protected void timer3_Tick(object sender, EventArgs e)
         {
             label4.Text = minimo().ToString() + "Cº";
+        }
+
+        protected void dropvagao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            hiddenmodal.Text = "zta";
         }
     }
 }

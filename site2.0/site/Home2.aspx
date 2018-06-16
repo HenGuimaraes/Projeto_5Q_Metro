@@ -51,7 +51,9 @@
                 });
             }, 1000);
         }
-        
+      
+
+       
     </script>
 </head>
 <body>
@@ -87,8 +89,8 @@
                            
                           </table>
                         </center>
-            <asp:Timer ID="timer1" runat="server" Interval="60000" OnTick="timer1_Tick" ></asp:Timer>
-                       <asp:Timer ID="timer2" runat="server" Interval="60000" OnTick="timer2_Tick" ></asp:Timer>
+                         <asp:Timer ID="timer1" runat="server" Interval="6000" OnTick="timer1_Tick" ></asp:Timer>
+                       <asp:Timer ID="timer2" runat="server" Interval="60000" OnTick="timer2_Tick" ClientIDMode="Predictable"></asp:Timer>
                       <asp:Timer ID="timer3" runat="server" Interval="60000" OnTick="timer3_Tick" ></asp:Timer>
                       <asp:Timer ID="timer4" runat="server" Interval="60000" OnTick="timer4_Tick" ></asp:Timer>
 
@@ -105,38 +107,81 @@
             </div>
         </div>
         <asp:Label ID="hiddenmodal" runat="server" Visible="false"></asp:Label>
+        <asp:Label ID="hiddentemp" runat="server" Visible="false"></asp:Label>
         <!-- modal da tabela de vagões e trens -->
         <div id="myModal2">
 
 	        <div class="modal-content" id="modal-tabela">
                 <span class="close2 ">&times;</span>
-               <center>
-                <div style="width:60%; height:60%; background-color:gray;">
-                    
-                       <table>
+               <label> Selecione o 
+                   <br />trem:</label>
+                <center>               
+                        <asp:DropDownList ID="dropvagao" runat="server" OnSelectedIndexChanged="dropvagao_SelectedIndexChanged" AutoPostBack="true">       
+                    </asp:DropDownList>
+                   
+               
+                <div style="width:80%;  border:solid; background-color:gray;">
+                    <%if (dropvagao.SelectedValue == "1")
+                        { %>
+                      <button style="background-color:transparent; border-color:transparent; z-index:2;width:3%; height:4%;
+                                   position:fixed; right:73.3%; margin-top:3%;" id="modalgraficovagao" type="button" class="btn btn-default"></button>
+                                  <%} %>
+                  
+                          <asp:UpdatePanel ID="UpdatePanel3" runat="server" >
+                                 <ContentTemplate>
+                                   
+                       <table style="width:100%;">
                            <tr> 
-                                <th> <asp:button id="buton1" runat="server" Text="vagao1" style="background-color:transparent; border-color:transparent;" /></th>
-                                <th> Vagao2</th>
-                                <th> Vagao3</th>
-                                <th> Vagao4</th>
-                                <th> Vagao5</th>
-                                <th> Vagao6</th>
-                                <th> Vagao7</th>
-                                <th> Vagao8</th>
-                           </tr>
-                           <tr>
-                               <td><asp:Label ID="label0" runat="server"></asp:Label></td>
-                               <td><asp:label ID="label6" runat="server"></asp:label></td>
-                               <td><asp:label ID="label7" runat="server"></asp:label></td>
-                               <td><asp:label ID="label8" runat="server"></asp:label></td>
-                               <td><asp:label ID="label5" runat="server"></asp:label></td>
-                               <td><asp:label ID="label9" runat="server"></asp:label></td>
-                               <td><asp:label ID="label10" runat="server"></asp:label></td>
                                
+                                <th> Vagao</th>
+                                <th> media</th>
+                                <th> mediana</th>
+                                <th> status</th>
                            </tr>
+                        
+                           <tr>
+                                
+                              <%if (dropvagao.SelectedValue == "1")
+                                             { %>
+                                 <td>    
+                                        <asp:Label ID="label10" runat="server"></asp:Label> </td> 
+                               <td> <asp:Label ID="label0" runat="server" ></asp:Label></td>
+                               <td> <asp:Label ID="label5" runat="server" ></asp:Label></td>
+                                 
+                               <td id="diretorio1"> <asp:Label ID="label6" runat="server" style="font-weight:bold;" ></asp:Label></td>
+                                   
+                           </tr>
+                      
+                                   
+                           <%} %>
+                           
+                           
+                          
+                           <% int contavagao = 0;
+                              
+                               while (contavagao < 7)
+                               { %>
+                            <tr>
+                                <% eita.Text = nome1(contavagao);%>
+                               
+                               
+                               <td> <asp:label ID="eita" runat="server"></asp:label></td>
+                               <td> <asp:Label ID="label8" runat="server" text="0.0"></asp:Label></td>
+                               <td> <asp:Label ID="label9" runat="server" Text ="0.0"></asp:Label></td>
+                               <td> <asp:Label ID="label18" runat="server"  Text ="sem operação"></asp:Label></td>
+                           </tr>
+                           <% contavagao++;
+                                    } %>
+                          
                            <!-- tabela das temperaturas -->
                            
                           </table>
+                                 
+                            </ContentTemplate>
+                               </asp:UpdatePanel>
+                     
+                             
+                               
                         </center>
 
                 </div>
@@ -144,7 +189,8 @@
             </div>
         </div>
         <!-- modal da tela de cadastro -->
-		<div id="myModal3">
+
+        <div id="myModal3">
             <div class="modal-content" id="modal-cadastro-usuario">
                 <span class="close3">&times;</span><!-- "botão" de fechar a modal-->
                 <div id="modalCadastro">
@@ -203,7 +249,7 @@
                 
             </div>
         </div>
-
+      
         <!-----------------Cabeçalho com menu dropdown e a logo----------------------->
         <header>
             <nav class="navbar navbar-default" style="margin-bottom:0; background-color:white">
@@ -269,6 +315,10 @@
              <%if (hiddenmodal.Text =="z"){%>
                 modal3.style.display = "block"; 
          <% } %>
+              <%if (hiddenmodal.Text == "zta"){%>
+                modal2.style.display = "block"; 
+         <% } %>
+
            
         </script>
              

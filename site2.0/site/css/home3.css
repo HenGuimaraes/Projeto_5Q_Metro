@@ -85,17 +85,30 @@ footer p{
 }
 
 /* modal fundo */
-#myModal1, #myModal2, #myModal3, #myModal4 {
+#myModal1,#myModal3, #myModal4 {
     display: none; /* none por padrão */
     position: fixed; /* fixa o modal na tela */
-    z-index: 20; /* fica no topo */
+    z-index: 50; /* fica no topo */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */ 
     background-color: rgb(0,0,0); /* cor de fundo */
     background-color: rgba(0,0,0,0.4); /* preto com opacidade */
+    
 }
+#myModal2 {
+    display: none; /* none por padrão */
+    position: fixed; /* fixa o modal na tela */
+    z-index: 10; /* fica no topo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* cor de fundo */
+    background-color: rgba(0,0,0,0.4); /* preto com opacidade */
+}
+
 
 /* Modal conteudo/Box */
 /* Estilo da modal do gráfico */
@@ -104,8 +117,18 @@ footer p{
     margin: 6% auto; /* 15% do topo e centralizado */
     padding: 20px;
     border: 1px solid #888;
-    height:70%;
-    width: 70%; /* pode ser mais ou menos de 70% dependendo da tela */
+    height: 70%;
+    width: 70%;
+    /* pode ser mais ou menos de 70% dependendo da tela */
+}
+#modal-grafico1 {
+    /*background-color:aliceblue;*/
+    margin: 6% auto; /* 15% do topo e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    height: 70%;
+    width: 70%;
+    /* pode ser mais ou menos de 70% dependendo da tela */
 }
 
 /* Estilo da modal que tem as tabelas de arduinos e vagões */

@@ -225,7 +225,7 @@ namespace site
                             while (reader.Read() == true)
                             {
                                 conta = reader.GetInt32(0);
-                               // cmd.ExecuteNonQuery();
+                               //cmd.ExecuteNonQuery();
 
                             }
                         }
