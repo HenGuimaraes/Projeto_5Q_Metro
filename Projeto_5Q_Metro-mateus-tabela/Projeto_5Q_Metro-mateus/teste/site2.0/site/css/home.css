@@ -1,0 +1,61 @@
+﻿table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+	margin-left:10%;
+	margin-top:5%;
+}
+
+td:hover{
+	color:black;
+}
+
+.tabela-hov:hover{/*alterado*/
+	color:black;
+}
+#pega{
+	background:#f9f9f9;
+}	
+#menu-trem{/*alterado*/
+	margin-left:42%;
+	margin-bottom:4%;
+}
+#label-legenda{
+}
+#dropvagao {
+    padding: 3px 50px 3px 50px;/*alterado*/
+    float: left;
+    background-color:#dddddd;
+    font-weight: bold;
+    -webkit-appearance:none;
+}
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding:8px;
+	border-color:black;
+}
+
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding:8px;
+	border-color:black;
+}
+
+tr:nth-child(even) {
+    background-color: #e5e5e5;
+	color:black;
+}
+
+tr:nth-child(odd) {
+    background-color: #eaeaea;
+	color:black;
+}
+
+.backImg{
+    height: 270px;
+    width: 100%;
+    background-image: url(../img/metro.jpg);
+    background-position: center;
+    background-size: cover;
+}
